@@ -25,7 +25,7 @@ export default class NavBar extends Component{
                 }}
             >Kennels</NavLink>
             <NavLink
-                to="/Dog Run"
+                to="/DogRun"
                 /* set exact so it knows to only set activeStyle when route is deeply equal to link */
                 exact
                 /* add styling to Navlink */
@@ -52,7 +52,14 @@ export default class NavBar extends Component{
             style={link}
             activeStyle={{
                 backrround: 'darkblue' 
-            }}>Pics</NavLink>
+            }}>Pics</NavLink> 
+            <NavLink
+                to="/Contact"
+                exact
+                style={link}
+                activeStyle={{
+                    backrround: 'darkblue'
+                }}>Contact</NavLink>
         </div>)
     }
 }
