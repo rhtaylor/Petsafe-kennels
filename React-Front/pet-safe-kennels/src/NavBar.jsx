@@ -14,7 +14,7 @@ export default class NavBar extends Component{
     render(){
         return(<div>
             <NavLink
-                to="/Kennels"
+                to="/Kennel"
                 /* set exact so it knows to only set activeStyle when route is deeply equal to link */
                 exact
                 /* add styling to Navlink */
