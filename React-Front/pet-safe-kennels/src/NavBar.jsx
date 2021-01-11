@@ -15,10 +15,7 @@ export default class NavBar extends Component{
         display: "show"
     }
     componentDidMount(){
-        debugger 
-        if(this.props.location.pathname === '/'){
-            this.setState({display: "none"})
-        }
+       
     }
     render(){
         return(<div style={{display: this.state.display}}>

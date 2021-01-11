@@ -38,7 +38,8 @@ export default class Home extends Component{
             </header> 
             <footer>
                  <p>{info}</p> 
-                <p>{post_info}</p>
+                <p>{post_info}</p> 
+                <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
         )
