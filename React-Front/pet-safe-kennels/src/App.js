@@ -7,7 +7,17 @@ import Kennel from './Kennel.jsx'
 import DogRun from './DogRun.jsx' 
 import Contact from './Contact.jsx'
 class App extends Component{ 
-  
+  componentDidMount(){
+    fetch('http://localhost:3000/customers.json') 
+    .then(res =>{
+      console.log(res.body) 
+      console.log(res.status)  
+      console.log(res)
+      return res.json();
+    })
+    .then(data => console.log(data)) 
+    .catch(err => console.log(err))
+  }
   render(){
   return (<header className="App-header">
        <Router>
