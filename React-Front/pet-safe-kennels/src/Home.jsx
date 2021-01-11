@@ -27,7 +27,7 @@ export default class Home extends Component{
             <div id="container">
             <header id="home"> 
                 <Route path='/Kennel' component={Kennel} />
-                <div id="home" > 
+                <div  > 
                 <img alt="home"  src={home} usemap="#imgmap" onClick={e=>this.mouseFinder(e)}/> 
                 <map name="imgmap">
                 <area onClick={e=>this.dog(e)} shape="dog" coords="149,180,229,190" href="http://localhost:3001/Kennel" alt="dog">
