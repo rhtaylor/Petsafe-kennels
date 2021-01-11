@@ -1,0 +1,19 @@
+#container{ 
+    display: flex;
+    align-content: center;
+    
+#home{
+    
+    
+    img{
+        align-self: center;
+        height: 350px; 
+        width: 350px;
+    } 
+    p{
+        justify-self: center; 
+        float: left;
+    }
+} 
+
+}
