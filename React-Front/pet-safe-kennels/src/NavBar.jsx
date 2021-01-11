@@ -11,8 +11,17 @@ const link = {
 } 
 
 export default class NavBar extends Component{
+    state={
+        display: "show"
+    }
+    componentDidMount(){
+        debugger 
+        if(this.props.location.pathname === '/'){
+            this.setState({display: "none"})
+        }
+    }
     render(){
-        return(<div>
+        return(<div style={{display: this.state.display}}>
             <NavLink
                 to="/Kennel"
                 /* set exact so it knows to only set activeStyle when route is deeply equal to link */
