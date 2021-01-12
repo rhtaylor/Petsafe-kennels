@@ -3,7 +3,7 @@ import './css/button.scss'
 export default class Button extends Component{
     render(){
         return(<div>
-            <button>Free Quote</button>
+            <button>Get Free Quote</button>
         </div>)
     }
 }
