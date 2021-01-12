@@ -1,23 +1,25 @@
 #container{ 
 background-color: black;   
+align-content: center;
+img{  
+    padding-left: 70vh; 
+    align-self: center;
+    width: 500px; 
     
+}
 #home{
     
-    
     img{ 
-        padding-left: 80vh;
+        padding-left: 40vh;
         align-self: center;
-        height: 350px; 
-        width: 350px;
+        height: 400px; 
+        width: 1024px;
     } 
     p{
         justify-self: center; 
         float: left;
     } 
-    h1{ 
-       padding-left: 80vh;
-       justify-self: center;
-    }
+    
 }  
 h1{ 
     padding-left: 80vh;

@@ -6,6 +6,7 @@ import NavBar from './NavBar.jsx'
 import Kennel from './Kennel.jsx' 
 import DogRun from './DogRun.jsx' 
 import Contact from './Contact.jsx'
+
 class App extends Component{ 
   componentDidMount(){
     fetch('http://localhost:3000/customers.json') 
