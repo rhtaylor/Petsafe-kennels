@@ -1,3 +1,30 @@
+
 .contact-form{
-    display: none; 
+    display: none;  
+    position: relative;
+    background: url(#{'../favicon.ico'}); 
+    height: 8.5em; 
+    background-repeat: no-repeat; 
+    justify-content: center;
+} 
+label{
+    color: rgb(250, 71, 17)
+}
+#phone_number{
+    height: 16px; 
+
+} 
+#name{
+    height: 16px;
+} 
+#email{
+    height: 16px;
+}
+#message{
+  height: 10vh; 
+  width: 30vh;
+} 
+#submit{
+    height: 10vh;
+    border-radius: 10px;
 }

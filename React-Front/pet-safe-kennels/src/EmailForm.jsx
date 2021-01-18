@@ -33,14 +33,17 @@ export default class ContactUs extends Component{
     render(){
     return (
         <form className="contact-form" style={{"display": this.state.display}} onSubmit={this.sendEmail}>
-            <input type="hidden" name="contact_number" />
+            <label style={{"color": "red"}}>Phone Number</label>
+            <input id="phone_number" type="phone" name="contact_number" />
             <label>Name</label>
-            <input type="text" name="user_name" />
+            <input id="name" type="text" name="user_name" />
             <label>Email</label>
-            <input type="email" name="user_email" />
+            <input id="email" type="email" name="user_email" />
             <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
+            <textarea id="message" name="message" />
+            <input type="image" id="submit"  type="submit" value="Send" />  
+            
+
         </form>
     );
 } 
