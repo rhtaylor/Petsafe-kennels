@@ -6,10 +6,11 @@ export default class Button extends Component{
         this.state={
             display: "flex"
         }
-    }
+    } 
+    
     render(){
         return(<div>
-            <button style={{display: this.state.display}} onClick={e=>this.props.updateForm(e)}>Get Free Quote</button> 
+            <button style={{ display: this.state.display }} onClick={this.props.handleClick}>Get Free Quote</button> 
 
         </div>)
     }

@@ -15,15 +15,21 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 const URL = 'http://localhost:3001/Kennel' 
 
 export default class Home extends Component{
-    state={
-        name: "full name", 
-        email: 'email', 
-        phone_number: 'phone_number'
-    } 
+    constructor(props){
+        super(props)
+        this.state = {
+            name: "full name",
+            email: 'email',
+            phone_number: 'phone_number'
+        } 
+        this.updateForm = this.updateForm.bind(this)
+    }
+    
      
-    updateForm=(e)=>{
-        e.preventDefault()
+    updateForm(e){
+        e.preventDefault() 
         debugger
+        
     }
     mouseFinder(e){
         e.preventDefault()
@@ -47,7 +53,7 @@ export default class Home extends Component{
                 
             </header> 
             <footer>
-                <Button handleClick={this.updateForm} />
+                <Button handleClick={(e)=>this.updateForm(e)} />
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
