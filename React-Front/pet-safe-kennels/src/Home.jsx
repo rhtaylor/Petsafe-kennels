@@ -32,7 +32,8 @@ export default class Home extends Component{
         debugger 
         this.setState({display: "flex"})
         
-    }
+    } 
+    
     mouseFinder(e){
         e.preventDefault()
         console.log(e.screenX, e.screenY) 
@@ -56,7 +57,7 @@ export default class Home extends Component{
             </header> 
             <footer>
                 <Button handleClick={(e)=>this.updateForm(e)} /> 
-                <ContactUs display={{display: this.state.display}}/>
+                <ContactUs display={{display: this.state.display}} stateToProp={this.state.display}/>
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
