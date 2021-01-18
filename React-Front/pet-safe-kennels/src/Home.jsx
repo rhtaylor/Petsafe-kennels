@@ -10,7 +10,7 @@ import LOGO from './LOGO.png'
 import PropTypes from 'prop-types' 
 import Button from './Button.jsx'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';  
-
+import ContactUs from './EmailForm.jsx'
 
 const URL = 'http://localhost:3001/Kennel' 
 
@@ -20,7 +20,8 @@ export default class Home extends Component{
         this.state = {
             name: "full name",
             email: 'email',
-            phone_number: 'phone_number'
+            phone_number: 'phone_number', 
+            display: null
         } 
         this.updateForm = this.updateForm.bind(this)
     }
@@ -28,7 +29,8 @@ export default class Home extends Component{
      
     updateForm(e){
         e.preventDefault() 
-        debugger
+        debugger 
+        this.setState({display: "flex"})
         
     }
     mouseFinder(e){
@@ -53,7 +55,8 @@ export default class Home extends Component{
                 
             </header> 
             <footer>
-                <Button handleClick={(e)=>this.updateForm(e)} />
+                <Button handleClick={(e)=>this.updateForm(e)} /> 
+                <ContactUs display={{display: this.state.display}}/>
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
