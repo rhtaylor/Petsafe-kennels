@@ -7,7 +7,8 @@ export default class ContactUs extends Component{
     constructor(props){
         super(props)  
         this.state={
-            display: "none"
+            display: "none", 
+            position: "none"
         }
         
     }
@@ -17,7 +18,8 @@ export default class ContactUs extends Component{
     componentDidUpdate(prevProps) {
         debugger
         if (prevProps.display !== this.props.display) {
-            this.setState({ display: this.props.display.display });
+            this.setState({ display: this.props.display.display,  
+                            position: this.props.stateToProp });
         }
     }
      sendEmail(e) {
@@ -32,15 +34,17 @@ export default class ContactUs extends Component{
     }
     render(){
     return (
-        <form className="contact-form" style={{"display": this.state.display}} onSubmit={this.sendEmail}>
-            <label style={{"color": "red"}}>Phone Number</label>
+        <form className="contact-form" style={{"display": this.state.display, "flex-direction": this.state.direction}} onSubmit={this.sendEmail}>
+            <label style={{ "color": "red" }}>Phone Number</label>
             <input id="phone_number" type="phone" name="contact_number" />
             <label>Name</label>
             <input id="name" type="text" name="user_name" />
+            
             <label>Email</label>
             <input id="email" type="email" name="user_email" />
             <label>Message</label>
             <textarea id="message" name="message" />
+            <br/>
             <input type="image" id="submit"  type="submit" value="Send" />  
             
 

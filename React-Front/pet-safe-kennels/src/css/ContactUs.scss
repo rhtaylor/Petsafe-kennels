@@ -2,13 +2,18 @@
 .contact-form{
     display: none;  
     position: relative;
+    flex-direction: column;
     background: url(#{'../favicon.ico'}); 
-    height: 8.5em; 
+    height: 100%; 
     background-repeat: no-repeat; 
-    justify-content: center;
+    justify-content: center; 
+    margin-left: 65vh;
 } 
 label{
     color: rgb(250, 71, 17)
+} 
+input{
+    width: 50vh;
 }
 #phone_number{
     height: 16px; 
@@ -21,9 +26,12 @@ label{
     height: 16px;
 }
 #message{
-  height: 10vh; 
+  height: 30vh; 
   width: 30vh;
 } 
+textarea{
+    height: 20vh;
+}
 #submit{
     height: 10vh;
     border-radius: 10px;

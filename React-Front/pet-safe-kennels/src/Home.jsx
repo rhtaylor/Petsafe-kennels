@@ -21,7 +21,8 @@ export default class Home extends Component{
             name: "full name",
             email: 'email',
             phone_number: 'phone_number', 
-            display: null
+            display: null, 
+            direction: null
         } 
         this.updateForm = this.updateForm.bind(this)
     }
@@ -30,7 +31,9 @@ export default class Home extends Component{
     updateForm(e){
         e.preventDefault() 
         debugger 
-        this.setState({display: "flex"})
+        this.setState(
+        { display: "flex", 
+        direction: 'column'})
         
     } 
     
@@ -57,7 +60,7 @@ export default class Home extends Component{
             </header> 
             <footer>
                 <Button handleClick={(e)=>this.updateForm(e)} /> 
-                <ContactUs display={{display: this.state.display}} stateToProp={this.state.display}/>
+                <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction}/>
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
