@@ -34,7 +34,8 @@ export default class ContactUs extends Component{
             }, (error) => {
                 console.log(error.text);
             });
-            debugger
+            this.props.history.push('/Kennel')
+
         }
     render(){
     return (
