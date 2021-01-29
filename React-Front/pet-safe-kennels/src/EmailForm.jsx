@@ -5,7 +5,8 @@ import emailjs from 'emailjs-com';
 
 export default class ContactUs extends Component{
     constructor(props){
-        super(props)  
+        super(props)   
+        this.sendEmail = this.sendEmail.bind(this)
         this.state={
             display: "none", 
             position: "none"
@@ -22,16 +23,19 @@ export default class ContactUs extends Component{
                             position: this.props.stateToProp });
         }
     }
-     sendEmail(e) {
+     sendEmail(e) { 
         e.preventDefault();
-
-        emailjs.sendForm('service_4dlh4gj', 'template_ttirotc', e.target, 'user_fr2MGNwexUI3nLUlHjFKp')
-            .then((result) => {
-                console.log(result.text);
+            emailjs.sendForm('service_4dlh4gj', 'template_ttirotc', e.target, 'user_fr2MGNwexUI3nLUlHjFKp')
+            .then((result) => { 
+                debugger
+                console.log(result.text); 
+                console.log("FUCK THIS WILL BE HARD!") 
+                console.log(result)
             }, (error) => {
                 console.log(error.text);
             });
-    }
+            debugger
+        }
     render(){
     return (
         <form className="contact-form" style={{"display": this.state.display, "flex-direction": this.state.direction}} onSubmit={this.sendEmail}>
