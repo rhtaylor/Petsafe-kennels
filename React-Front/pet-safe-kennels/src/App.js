@@ -23,7 +23,7 @@ class App extends Component{
   return (<header className="App-header">
        <Router>
        <Route path='/' component={NavBar} />
-       <Route exact path='/' component={Home} /> 
+       <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 
        <Route path='/Kennel' component={Kennel} /> 
        <Route path='/DogRun' component={DogRun} /> 
        <Route path='/Contact' component={Contact} />

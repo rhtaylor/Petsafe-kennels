@@ -27,7 +27,9 @@ export default class Home extends Component{
         this.updateForm = this.updateForm.bind(this)
     }
     
-     
+    componentDidMount(){
+        debugger
+    } 
     updateForm(e){
         e.preventDefault() 
         debugger 
@@ -60,7 +62,7 @@ export default class Home extends Component{
             </header> 
             <footer>
                 <Button handleClick={(e)=>this.updateForm(e)} /> 
-                <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction}/>
+                <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction} history={this.props.history}/>
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>
