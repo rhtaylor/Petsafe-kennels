@@ -24,7 +24,8 @@ export default class Home extends Component{
             display: null, 
             direction: null
         } 
-        this.updateForm = this.updateForm.bind(this)
+        this.updateForm = this.updateForm.bind(this) 
+        this.popupFn = this.popupFn.bind(this)
     }
     
     componentDidMount(){
@@ -50,7 +51,13 @@ export default class Home extends Component{
     dog=(e)=>{
         console.log("DOGGO", e)
     
+    } 
+    popupFn(e){ 
+        e.preventDefault()
+        debugger
+
     }
+
     render(){
         return( 
             <div id="container"> 
@@ -61,8 +68,10 @@ export default class Home extends Component{
                 
             </header> 
             <footer>
-                <Button handleClick={(e)=>this.updateForm(e)} /> 
-                <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction} history={this.props.history}/>
+                    <Button handleClick={(e) => this.updateForm(e)} /> 
+                <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction} history={this.props.history} 
+                        popupFn={this.popupFn}
+                />
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
             </div>

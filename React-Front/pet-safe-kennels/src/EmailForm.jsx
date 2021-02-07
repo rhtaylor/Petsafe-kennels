@@ -40,6 +40,11 @@ export default class ContactUs extends Component{
     render(){
     return (
         <form className="contact-form" style={{"display": this.state.display, "flex-direction": this.state.direction}} onSubmit={this.sendEmail}>
+            <a
+                className='close' href='#'
+                onClick={(e) => this.props.popupFn('hide')}
+            ><b>&times;</b>
+            </a> 
             <label style={{ "color": "red" }}>Phone Number</label>
             <input id="phone_number" type="phone" name="contact_number" />
             <label>Name</label>
