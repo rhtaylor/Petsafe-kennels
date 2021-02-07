@@ -42,7 +42,7 @@ export default class ContactUs extends Component{
         <form className="contact-form" style={{"display": this.state.display, "flex-direction": this.state.direction}} onSubmit={this.sendEmail}>
             <a
                 className='close' href='#'
-                onClick={(e) => this.props.popupFn('hide')}
+                onClick={(e) => this.props.popupFn(e)}
             ><b>&times;</b>
             </a> 
             <label style={{ "color": "red" }}>Phone Number</label>

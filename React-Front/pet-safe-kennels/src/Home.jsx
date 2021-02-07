@@ -53,8 +53,13 @@ export default class Home extends Component{
     
     } 
     popupFn(e){ 
-        e.preventDefault()
+        e.preventDefault() 
         debugger
+        this.setState(
+            {
+                display: null,
+                direction: null
+            })
 
     }
 
