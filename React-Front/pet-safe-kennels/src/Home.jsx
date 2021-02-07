@@ -25,7 +25,7 @@ export default class Home extends Component{
             direction: null
         } 
         this.updateForm = this.updateForm.bind(this) 
-        this.popupFn = this.popupFn.bind(this)
+       
     }
     
     componentDidMount(){
@@ -33,10 +33,17 @@ export default class Home extends Component{
     } 
     updateForm(e){
         e.preventDefault() 
-        debugger 
+        debugger  
+        this.state.display == null
+             ? 
         this.setState(
         { display: "flex", 
-        direction: 'column'})
+        direction: 'column'})  
+             : 
+        this.setState({ 
+            display: null,
+            direction: null 
+        })
         
     } 
     
@@ -52,17 +59,7 @@ export default class Home extends Component{
         console.log("DOGGO", e)
     
     } 
-    popupFn(e){ 
-        e.preventDefault() 
-        debugger
-        this.setState(
-            {
-                display: null,
-                direction: null
-            })
-
-    }
-
+    
     render(){
         return( 
             <div id="container"> 
@@ -75,7 +72,7 @@ export default class Home extends Component{
             <footer>
                     <Button handleClick={(e) => this.updateForm(e)} /> 
                 <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction} history={this.props.history} 
-                        popupFn={this.popupFn}
+                        updateForm={this.updateForm}
                 />
                 <h1>Call Us: 520-730-7020</h1>
             </footer>  
