@@ -1,0 +1,18 @@
+.Dog{
+    display: block; 
+    align-content: center;
+}
+
+#small-dog-kennel { 
+    background: url(#{'../pictures/low-Profile-Dog-Kennel.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 250px; 
+    max-width: 450px;
+    margin-right: 70vh; 
+    p{
+        color: lavenderblush; 
+        text-align: center; 
+         font-weight: bold;
+    }
+}
