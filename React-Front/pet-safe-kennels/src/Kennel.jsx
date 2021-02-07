@@ -15,15 +15,18 @@ export default class Kennel extends Component{
         
         this.flipKennel = this.flipKennel.bind(this)
     }
-    flipKennel(){
-
+    flipKennel(e){
+        e.preventDefault()  
+        
+        this.setState({display: 'show'}) 
+        debugger
     }
     render(){
         return(<div className="Dog">
             <h1>Custom Built Kennels Designed To Keep Pets Safe!</h1> 
             <p>{info}</p>
             <p>{post_info}</p>  
-            <LowProfile /> 
+            <LowProfile show={this.state.display} clickMe={e=>this.flipKennel(e)} /> 
             <LowProfileBack show={this.state.display}/>
         </div>
         )
