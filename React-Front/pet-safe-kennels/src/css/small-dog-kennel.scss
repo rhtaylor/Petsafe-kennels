@@ -14,5 +14,19 @@
         color: lavenderblush; 
         text-align: center; 
          font-weight: bold;
+    } 
+} 
+ #small-dog-kennel-back{
+    background: url(#{'../pictures/card-back.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 250px; 
+    max-width: 450px;
+    margin-right: 70vh;  
+    * {
+        color: black; 
+        text-align: center;
+        font-weight: bold;
     }
-}
+ }
+ 

@@ -10,24 +10,32 @@ export default class Kennel extends Component{
     constructor(props){ 
         super(props); 
         this.state = {
-            display: 'none'
+            display: 'show', 
+            front: 'show',
+            back: 'none', 
+
         }
         
         this.flipKennel = this.flipKennel.bind(this)
     }
     flipKennel(e){
-        e.preventDefault()  
+        e.preventDefault() 
+    debugger 
+    let {front, back} = this.state; 
+    if (front == 'show'){ front = 'none'} else { front = 'show'} 
+    if (back == 'none'){ back = 'show'} else { back = 'none' }  
+    debugger   
+    this.setState({front: front , back: back}) 
         
-        this.setState({display: 'show'}) 
-        debugger
+        
     }
     render(){
         return(<div className="Dog">
             <h1>Custom Built Kennels Designed To Keep Pets Safe!</h1> 
             <p>{info}</p>
             <p>{post_info}</p>  
-            <LowProfile show={this.state.display} clickMe={e=>this.flipKennel(e)} /> 
-            <LowProfileBack show={this.state.display}/>
+            <LowProfile show={this.state.front} clickMe={e=>this.flipKennel(e)} /> 
+            <LowProfileBack show={this.state.back} clickMe={e => this.flipKennel(e)}/>
         </div>
         )
     }

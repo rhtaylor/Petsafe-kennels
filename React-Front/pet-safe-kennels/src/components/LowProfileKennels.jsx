@@ -8,16 +8,13 @@ export default class LowProfile extends Component{
         }
     } 
     componentDidUpdate(props){
-        debugger 
-        this.state.display == 'show' ? 
-        this.setState({display: 'none'}) :
-        console.log("nothing to see here")
+        debugger
     }
     render(){
         return(
                 <div id="small-dog-kennel"  
                 onClick={e=>this.props.clickMe(e)} 
-                style={{"display" : this.state.display}}
+                style={{"display" : this.props.show}}
                 key={this.props.show}
                 >
                 <p>SMALL DOG OUTDOOR KENNELS</p>
