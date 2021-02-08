@@ -6,6 +6,7 @@ import NavBar from './NavBar.jsx'
 import Kennel from './Kennel.jsx' 
 import DogRun from './DogRun.jsx' 
 import Contact from './Contact.jsx'
+import SmallDogKennels from './components/SmallDogKennels';
 
 class App extends Component{ 
   componentDidMount(){
@@ -24,7 +25,8 @@ class App extends Component{
        <Router>
        <Route path='/' component={NavBar} />
        <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 
-       <Route path='/Kennel' component={Kennel} /> 
+       <Route path='/Kennel' component={Kennel} />  
+      <Route exact path='/SmallDogKennels' render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> 
        <Route path='/DogRun' component={DogRun} /> 
        <Route path='/Contact' component={Contact} />
      </Router>
