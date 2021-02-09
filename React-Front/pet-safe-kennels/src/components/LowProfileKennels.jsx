@@ -3,7 +3,6 @@ import '../css/small-dog-kennel.scss'
 export default class LowProfile extends Component{
     constructor(props){
         super(props)  
-        
         this.state={
             display: 'show'  
         }
