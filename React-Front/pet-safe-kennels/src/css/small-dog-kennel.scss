@@ -5,7 +5,7 @@
 
 #small-dog-kennel {  
     cursor: pointer;
-    background: url(#{'../pictures/low-Profile-Dog-Kennel.jpg'}); 
+    background: url(#{'../pictures/lowProfileDogKennel.jpg'}); 
     background-repeat: no-repeat;
     background-position:center;
     min-height: 250px; 
@@ -38,5 +38,6 @@
  }
  #back{ 
         cursor: pointer;
-        color: rgb(165, 82, 82);
+        color: rgb(165, 82, 82); 
+        text-decoration: underline;
     }
