@@ -1,4 +1,4 @@
-button{  
+.button{  
 
     margin-left: 85vh; 
     font-size: larger;
@@ -6,7 +6,7 @@ button{
     background-color: rgb(255, 60, 0);
     box-shadow: 4px 6px rgb(202, 138, 138);
 } 
-button:hover{
+.button:hover{
     background-color: rgb(0, 255, 255); 
     box-shadow: 2px 5px rgb(221, 236, 153);
     cursor: pointer;

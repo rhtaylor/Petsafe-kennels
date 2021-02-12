@@ -11,7 +11,7 @@ export default class Button extends Component{
     render(){
         return(<div id="buttonDiv"> 
             
-            <button style={{ display: this.state.display }} onClick={this.props.handleClick}>Get Free Quote</button> 
+            <button className='button' style={{ display: this.state.display }} onClick={this.props.handleClick}>Get Free Quote</button> 
             </div>)
     }
 }
