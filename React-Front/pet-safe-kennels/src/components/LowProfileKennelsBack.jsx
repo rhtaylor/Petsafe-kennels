@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-
+import KennelBtn from './KennelBtn.jsx'
 export default class LowProfileKennelsBack extends Component{
     constructor(props){
         super(props)
@@ -32,6 +32,7 @@ export default class LowProfileKennelsBack extends Component{
                 <li><a id="link"
                 onClick={e => this.myRouting(e)}
                 >More about Small Dog Kennels</a></li>
+                <li><KennelBtn /></li>
             </ul> 
             
         </div>)
