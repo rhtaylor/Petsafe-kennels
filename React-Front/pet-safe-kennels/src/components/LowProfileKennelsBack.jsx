@@ -24,15 +24,13 @@ export default class LowProfileKennelsBack extends Component{
         key={this.props.show} 
         onClick={e => this.props.clickMe(e)}
         >
-            <p>Our low profile model will keep your small pets safe.</p>
-            <ul>
+            <p>Our low-profile model will keep your small pets safe.</p>
+            <ul><li>Does not obstruct home views</li>
                 <li>Lid opens from the top for Owners.</li>
                 <li>Pet-door opens from the side.</li>
                 <li>Can connect to house via doggy door.</li>  
-                <li><a id="link"
-                onClick={e => this.myRouting(e)}
-                >More about Small Dog Kennels</a></li>
-                <li><KennelBtn /></li>
+                
+                <li><KennelBtn myroute={this.myRouting}/></li>
             </ul> 
             
         </div>)
