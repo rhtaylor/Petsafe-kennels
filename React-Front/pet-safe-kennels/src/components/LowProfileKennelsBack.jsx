@@ -27,8 +27,8 @@ export default class LowProfileKennelsBack extends Component{
             <p>Our low-profile model will keep your small pets safe.</p>
             <ul><li>Does not obstruct home views</li>
                 <li>Lid opens from the top for Owners.</li>
-                <li>Pet-door opens from the side.</li>
-                <li>Can connect to house via doggy door.</li>  
+                <li>Pet-door opens from the side for your pet.</li>
+                <li>Can connect to your house via a doggy door.</li>  
                 
                 <li><KennelBtn myroute={this.myRouting}/></li>
             </ul> 

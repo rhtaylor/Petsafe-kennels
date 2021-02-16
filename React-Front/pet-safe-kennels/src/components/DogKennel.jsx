@@ -4,13 +4,28 @@ import '../css/kennel-card.scss'
 export default class DogKennel extends Component{
     constructor(props){ 
         super(props) 
-        this.makeKennels = this.makeKennels.bind(this)
+        this.state={
+            i: 0
+        }
+        this.makeKennels = this.makeKennels.bind(this) 
+        this.setTimer = this.setTimer.bind(this)
+        
+    }   
 
+     setTimer(){
+            setInterval(function () {
+            
+            this.setState({i: ++ this.state.i})
+            
+        }.bind(this), this.props.delay);
     } 
-    makeKennels(kennelArray){
-        return kennelArray.map( kennel =>{ 
+     
+    makeKennels(){ 
+        debugger
+         let kennel = this.props.info[this.state.i] 
+         this.setTimer()
             return ( 
-            <div className="parentDog">
+            <div className="parentDog" key={this.i}>
             <div className="myKennels">  
                 <h3>{kennel.title}</h3>
                 <ul>
@@ -23,12 +38,11 @@ export default class DogKennel extends Component{
             </div>  
             </div>
             )}
-            )
-    }
+            
 
     render(){
         return(
-            <div>{ this.makeKennels(this.props.info) }</div>
+            <div>{this.makeKennels()}</div>
         )
     }
 }
