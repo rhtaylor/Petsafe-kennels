@@ -13,7 +13,8 @@ export default class LowProfileKennelsBack extends Component{
         
     }
     
-    myRouting(e){
+    myRouting(e){ 
+        debugger
         e.preventDefault()  
         this.props.push.push('SmallDogKennels') 
         
@@ -23,13 +24,10 @@ export default class LowProfileKennelsBack extends Component{
         return(<div id="small-dog-kennel-back" style={{display : this.props.show}} 
         key={this.props.show} 
         onClick={e => this.props.clickMe(e)}
-        >
-            <p>Our low-profile model will keep your small pets safe.</p>
+        >   <p>Our low-profile model will keep your small pets safe.</p>
             <ul><li>Does not obstruct home views</li>
                 <li>Lid opens from the top for Owners.</li>
-                <li>Pet-door opens from the side for your pet.</li>
                 <li>Can connect to your house via a doggy door.</li>  
-                
                 <li><KennelBtn myroute={this.myRouting}/></li>
             </ul> 
             
