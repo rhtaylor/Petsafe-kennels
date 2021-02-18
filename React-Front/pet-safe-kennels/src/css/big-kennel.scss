@@ -8,20 +8,21 @@
     max-width: 450px;
     
     p{
-        color: rgba(158, 129, 1, 0.808); 
+        color: rgba(0, 0, 0, 0.808); 
         text-align: center; 
         font-weight: bold; 
        
     } 
 } 
- #small-dog-kennel-back{ 
+
+ #big-kennel-back{ 
     cursor: pointer;
     background: url(#{'../pictures/card-back.jpg'}); 
     background-repeat: no-repeat;
     background-position:center;
     min-height: 250px; 
     max-width: 450px;
-    margin-right: 70vh;  
+      
     * {
         color: black; 
         text-align: center;
@@ -49,3 +50,4 @@
         color: rgb(165, 82, 82); 
         text-decoration: underline;
     }
+
