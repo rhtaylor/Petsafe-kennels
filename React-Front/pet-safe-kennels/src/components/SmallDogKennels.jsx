@@ -1,9 +1,11 @@
 import React, { Component } from 'react' 
 import DogKennel from './DogKennel.jsx'
-import lowProfileDogkennel from '../pictures/lowProfileDogKennel.jpg'
+import lowProfileDogkennel from '../pictures/lowProfileDogKennel.jpg' 
+import small from '../pictures/low-profile-small-dog.jpg' 
+import low from '../pictures/small-dog-kennels.jpg'
 import WrapAroundKennel from '../pictures/WrapAroundKennel.jpg'
-const SMALLDOGARRAY = [{title: 'Wrap Around', info: 'Custom kennel to wrap to the contours of the house. Attached to the house with doggy-door.',img:  WrapAroundKennel, size: '20x3'}, 
-    {title: 'perfection for the little ones', info: 'small dog kennel attached to house with doggy-door and dog-door' , size: '3x5', img: lowProfileDogkennel}]
+const SMALLDOGARRAY = [{title:'Klassic Kennel', info: 'Classic Small Dog Kennel', img: small, size: '6x3'},{title: 'Wrap Around', info: 'Custom kennel to wrap to the contours of the house. Attached to the house with doggy-door.',img:  WrapAroundKennel, size: '20x3'}, 
+    { title: 'Cool and low-down', info:'Low profile and out of the way of your home, custom built to fit in house window nook', size:'7x2.5', img: low } ,{title: 'perfection for the little ones', info: 'small dog kennel attached to house with doggy-door and dog-door' , size: '3x5', img: lowProfileDogkennel}]
 export default class SmallDogKennels extends Component{
     constructor(props){
         super(props) 
@@ -26,9 +28,7 @@ export default class SmallDogKennels extends Component{
         return( <div id="small-dog-kennels-page">
             <a><h1 id="back" 
             onClick={e=>this.backUp(e)}
-            >{'<~Back'}</h1></a>
-            <p>Small, durable, attractive</p>  
-            <p>Low profile and out of the way of your home </p> 
+            >{'<~Back'}</h1></a> 
             <p>Does not obstruct window view, and out of the HOA view too</p>
             <p>Choose your style of custom fabricated lifting lids and dog doors</p>
             {this.makeKennels()}
@@ -39,11 +39,13 @@ export default class SmallDogKennels extends Component{
 
     componentDidMount() {
         if(this.state.i > SMALLDOGARRAY.length){
-           return this.setState({i: 0})
+            
+            return this.setState({i: 0})
         }
-        this.intervalI = setInterval(() => {
+        this.intervalI = setInterval(() => { 
+                   
          return   this.setState(preState => ({ i: ++preState.i }))
-        }, 3000)
+        }, 5000)
         
     } 
     componentWillUnmount(){
