@@ -8,11 +8,15 @@ export default class SmallDogKennels extends Component{
     constructor(props){
         super(props) 
         this.state ={i: 0} 
-        
         this.makeKennels = this.makeKennels.bind(this) 
-        
+        this.backUp = this.backUp.bind(this)
     } 
     
+    backUp(e){
+        e.preventDefault()
+        debugger
+        this.props.history.goBack(-1)
+    }
     makeKennels(){  
     return <DogKennel key={this.i} kennel={SMALLDOGARRAY[this.state.i] || SMALLDOGARRAY[0]} />
     }  
@@ -34,9 +38,15 @@ export default class SmallDogKennels extends Component{
     } 
 
     componentDidMount() {
+        if(this.state.i > SMALLDOGARRAY.length){
+           return this.setState({i: 0})
+        }
         this.intervalI = setInterval(() => {
          return   this.setState(preState => ({ i: ++preState.i }))
         }, 3000)
         
+    } 
+    componentWillUnmount(){
+        clearInterval(this.intervalI)
     }
 }

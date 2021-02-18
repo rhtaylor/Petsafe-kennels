@@ -9,9 +9,7 @@ export default class LowProfileKennelsBack extends Component{
         }
     }
     
-    componentDidUpdate(props){
-        
-    }
+    
     
     myRouting(e){ 
         debugger
