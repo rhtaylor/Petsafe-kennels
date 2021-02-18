@@ -1,0 +1,51 @@
+#big-dog-kennel {  
+    cursor: pointer; 
+    flex: 2;
+    background: url(#{'../pictures/6FT-California-Kennel.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 250px; 
+    max-width: 450px;
+    
+    p{
+        color: rgba(158, 129, 1, 0.808); 
+        text-align: center; 
+        font-weight: bold; 
+       
+    } 
+} 
+ #small-dog-kennel-back{ 
+    cursor: pointer;
+    background: url(#{'../pictures/card-back.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 250px; 
+    max-width: 450px;
+    margin-right: 70vh;  
+    * {
+        color: black; 
+        text-align: center;
+        font-weight: bold;
+    } 
+    #link{
+        color: rgb(116, 52, 22)
+    }  
+    #link:hover{
+        color: rgb(204, 105, 75);
+    } 
+    #more{
+       
+        font-size: medium;
+        border-radius: 3px;  
+        background-color: rgb(255, 60, 0);
+        box-shadow: 2px 3px rgb(202, 138, 138);
+    }
+    #more:hover{
+        cursor: pointer;
+    }
+ }
+ #back{ 
+        cursor: pointer;
+        color: rgb(165, 82, 82); 
+        text-decoration: underline;
+    }
