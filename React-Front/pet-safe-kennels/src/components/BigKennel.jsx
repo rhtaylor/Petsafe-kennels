@@ -17,7 +17,7 @@ export default class BigKennel extends Component{
             key={this.props.show}
         >
             <p>LARGE DOG OUTDOOR KENNELS</p>
-
+            <p id="bottom">click me</p>
         </div>)
     }
 }

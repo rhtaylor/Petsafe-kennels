@@ -21,7 +21,8 @@ export default class LowProfile extends Component{
 
                 key={this.props.show}
                 >
-                <p>SMALL DOG OUTDOOR KENNELS</p>
+                <p>SMALL DOG OUTDOOR KENNELS</p> 
+                <p id="bottom">click me</p>
               </div>  
               
 

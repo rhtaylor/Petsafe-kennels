@@ -10,13 +10,17 @@
     background-position:center;
     min-height: 250px; 
     max-width: 450px;
-    margin-right: 70vh; 
+    margin-right: 70vh;  
+    margin-left: 10vh; 
     p{
         color: lavenderblush; 
         text-align: center; 
         font-weight: bold; 
        
-    } 
+    }  
+    #bottom{
+        padding-top: 20vh;
+    }
 } 
  #small-dog-kennel-back{ 
     cursor: pointer;
