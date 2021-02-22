@@ -4,7 +4,7 @@ export default class Contact extends Component{
     render(){
         return(<div>
             <p>Contact info</p>
-            <p>WTF</p>
+            <p>call: 520-730-7020</p>
         </div>)
     }
 }

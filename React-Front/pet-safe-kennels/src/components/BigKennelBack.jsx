@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 import KennelBtn from './KennelBtn.jsx'
 import '../css/big-kennel.scss'
 export default class BigKennelBack extends Component{
-    
+    constructor(props){
+        super(props)
+        this.myRouting = this.myRouting.bind(this) 
+    }
+
     myRouting(e) {
+        
+        e.preventDefault() 
         debugger
-        e.preventDefault()
         this.props.push.push('BigDogKennels')
 
     }
