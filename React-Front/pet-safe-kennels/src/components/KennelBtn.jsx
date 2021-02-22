@@ -9,7 +9,7 @@ export default class KennelBtn extends Component{
     }
     render(){
         return(<div>
-            <button id="more" onClick={e => this.props.myroute(e)}> More about Small Dog Kennels</button>
+            <button id="more" onClick={e => this.props.myroute(e)}> More about These Dog Kennels</button>
         </div>)
     }
 }

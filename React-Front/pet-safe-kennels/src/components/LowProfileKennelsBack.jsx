@@ -19,10 +19,10 @@ export default class LowProfileKennelsBack extends Component{
      }
 
     render(){
-        return(<div id="small-dog-kennel-back" style={{display : this.props.show}} 
+        return (<div id="small-dog-kennel-back"  style={{display : this.props.show}} 
         key={this.props.show} 
         onClick={e => this.props.clickMe(e)}
-        >   <p>Our low-profile model will keep your small pets safe.</p>
+        ><p>Our low-profile model will keep your small pets safe.</p>
             <ul><li>Does not obstruct home views</li>
                 <li>Lid opens from the top for Owners.</li>
                 <li>Can connect to your house via a doggy door.</li>  

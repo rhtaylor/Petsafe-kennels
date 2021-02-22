@@ -15,19 +15,28 @@ export default class Kennel extends Component{
             display: 'show', 
             front: 'show',
             back: 'none', 
-
+            BigFront: 'show', 
+            BigBack: 'none'
         }
         
         this.flipKennel = this.flipKennel.bind(this)
     }
     flipKennel(e){
         e.preventDefault() 
-    debugger 
-    let {front, back} = this.state; 
-    if (front == 'show'){ front = 'none'} else { front = 'show'} 
-    if (back == 'none'){ back = 'show'} else { back = 'none' }  
-    debugger   
-    this.setState({front: front , back: back}) 
+    let {front, back, BigFront, BigBack} = this.state; 
+      
+    if (e.currentTarget.id == "small-dog-kennel" || e.currentTarget.id == "small-dog-kennel-back"){
+     if (front == 'show'){ front = 'none'} else { front = 'show'} 
+     if (back == 'none'){ back = 'show'} else { back = 'none' }  
+     
+    }  
+    if (e.currentTarget.id == "big-kennel" || e.currentTarget.id == 'big-kennel-back'){
+    if (BigFront == 'show') { BigFront = 'none' } else { BigFront = 'show' }
+    if (BigBack == 'none') { BigBack = 'show' } else { BigBack = 'none' }   
+    
+    }
+debugger
+    return this.setState({front: front , back: back, BigFront: BigFront, BigBack: BigBack}) 
         
         
     }
@@ -39,8 +48,8 @@ export default class Kennel extends Component{
             <div id="sub-kennel">
             <LowProfile show={this.state.front} clickMe={e=>this.flipKennel(e)} /> 
             <LowProfileBack push={this.props.history} show={this.state.back} clickMe={e => this.flipKennel(e)}/>
-            <BigKennel show={this.state.front} clickMe={e => this.flipKennel(e)} />  
-                <BigKennelBack push={this.props.history} show={this.state.back} clickMe={e => this.flipKennel(e)} />
+            <BigKennel show={this.state.BigFront} clickMe={e => this.flipKennel(e)} />  
+            <BigKennelBack push={this.props.history} show={this.state.BigBack} clickMe={e => this.flipKennel(e)} />
             </div>
         </div>
         )

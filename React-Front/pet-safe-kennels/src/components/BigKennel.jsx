@@ -9,7 +9,7 @@ export default class BigKennel extends Component{
     }  
 
     render(){
-        return(<div id="big-dog-kennel" 
+        return(<div id="big-kennel" 
             onClick={e => this.props.clickMe(e)}
 
             style={{ "display": this.props.show }}
