@@ -39,8 +39,8 @@ export default class Kennel extends Component{
             <div id="sub-kennel">
             <LowProfile show={this.state.front} clickMe={e=>this.flipKennel(e)} /> 
             <LowProfileBack push={this.props.history} show={this.state.back} clickMe={e => this.flipKennel(e)}/>
-            <BigKennel />  
-            <BigKennelBack />
+            <BigKennel show={this.state.front} clickMe={e => this.flipKennel(e)} />  
+                <BigKennelBack push={this.props.history} show={this.state.back} clickMe={e => this.flipKennel(e)} />
             </div>
         </div>
         )
