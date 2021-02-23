@@ -9,9 +9,11 @@
     background-repeat: no-repeat;
     background-position:center;
     min-height: 250px; 
-    max-width: 450px;
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(450px, 450px,450px); 
     margin-right: 70vh;  
-    margin-left: 10vh; 
+    margin-left: 10vh;  
+    margin-right: clamp(70vh, 70vh, 70vh);
     p{
         color: lavenderblush; 
         text-align: center; 
@@ -28,12 +30,14 @@
     background-repeat: no-repeat;
     background-position:center;
     min-height: 250px; 
-    max-width: 450px;
-    margin-right: 70vh;  
+    max-width: clamp(450px, 450px,450px);
+    margin-right: 70vh;   
+    margin-left: 10vh; 
     * {
         color: black; 
         text-align: center;
-        font-weight: bold;
+        font-weight: bold; 
+        word-wrap: break-word;
     } 
     #link{
         color: rgb(116, 52, 22)

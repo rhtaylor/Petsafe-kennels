@@ -5,8 +5,9 @@
     background-repeat: no-repeat;
     background-position:center;
     min-height: 250px; 
-    max-width: 400px;
     
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(450px, 450px,450px); 
     p{
         color: rgba(0, 0, 0, 0.808); 
         text-align: center; 
@@ -24,7 +25,8 @@
      background-repeat: no-repeat;
      background-position:center;
      min-height: 250px; 
-     max-width: 450px;
+     max-width: clamp(450px, 450px,450px); 
+     min-width: clamp(450px, 450px,450px); 
   
      * {
          color: black; 
