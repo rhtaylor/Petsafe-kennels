@@ -4,8 +4,8 @@
     background: url(#{'../pictures/6FT-California-Kennel.jpg'}); 
     background-repeat: no-repeat;
     background-position:center;
-    min-height: 250px; 
-    
+    max-height: clamp(30px, 300px, 300px); 
+    min-height: clamp(250px, 250px, 250px); 
     max-width: clamp(450px, 450px,450px); 
     min-width: clamp(450px, 450px,450px); 
     p{
@@ -24,7 +24,8 @@
      background: url(#{'../pictures/card-back.jpg'}); 
      background-repeat: no-repeat;
      background-position:center;
-     min-height: 250px; 
+     min-height: clamp(250px, 250px, 250px); 
+     max-height: clamp(300px, 300px, 300px); 
      max-width: clamp(450px, 450px,450px); 
      min-width: clamp(450px, 450px,450px); 
   
