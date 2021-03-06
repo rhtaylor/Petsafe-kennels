@@ -1,6 +1,6 @@
 import React, { Component } from 'react'  
 import '../css/kennel-card-all.scss'
-
+import DogKennelBack from './DogKennelBack.jsx'
 import DogKennel from './DogKennel.jsx'
 import lowProfileDogkennel from '../pictures/lowProfileDogKennel.jpg'
 import small from '../pictures/low-profile-small-dog.jpg'
@@ -13,7 +13,7 @@ export default class AllDogKennelsPage extends Component{
     this.make_kennels = this.make_kennels.bind(this)
    } 
    make_kennels(){
-       return DOGARRAY.map((k,i) => <DogKennel kennel={k}/>)
+       return DOGARRAY.map((k,i) => <span><DogKennel kennel={k}/><DogKennelBack kennel={k}/></span>)
    }
     render(){
         return(<div id="kennel_slide">
