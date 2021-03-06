@@ -15,8 +15,6 @@ export default class DogKennel extends Component{
                     <div className="myKennels" key={this.props.kennel[1]}>
                         <h3>{this.props.kennel.title}</h3>
                         <ul>
-                            
-                                <li>{this.props.kennel.info}</li>
                                 <img src={this.props.kennel.img}></img>
                                 <li>Size: {this.props.kennel.size}</li>
                             
