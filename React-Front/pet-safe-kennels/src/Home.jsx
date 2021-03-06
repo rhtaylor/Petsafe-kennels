@@ -11,6 +11,7 @@ import PropTypes from 'prop-types'
 import Button from './Button.jsx'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';  
 import ContactUs from './EmailForm.jsx'
+import AllDogKennelsPage from './components/All-Dog-Kennels';
 
 const URL = 'http://localhost:3001/Kennel' 
 
@@ -62,8 +63,9 @@ export default class Home extends Component{
     
     render(){
         return( 
+            
             <div id="container"> 
-          
+            <AllDogKennelsPage />
             <header id="home"> 
                 <Route path='/Kennel' component={Kennel} />
                  <img alt="home" src={happydog} />
