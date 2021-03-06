@@ -13,12 +13,12 @@ export default class AllDogKennelsPage extends Component{
     this.make_kennels = this.make_kennels.bind(this)
    } 
    make_kennels(){
-       return DOGARRAY.map((k) => <DogKennel kennel={k}/>)
+       return DOGARRAY.map((k,i) => <DogKennel kennel={k}/>)
    }
     render(){
-        return(<div>
+        return(<span>
             {this.make_kennels()} 
         
-        </div>)
+        </span>)
     }
 } 

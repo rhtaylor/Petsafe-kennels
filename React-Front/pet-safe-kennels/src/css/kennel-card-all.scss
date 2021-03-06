@@ -1,12 +1,27 @@
 .parentDog{
-    display: block; 
-    .myKennels{
+    display:inline-block !important; 
+    .myKennels{  
+        
+        padding-bottom: 10%;
+        div{
+            max-height: clamp(200px, 200px, 200px) !important; 
+            max-width: clamp(200px, 200px,200px) !important; 
+        } 
+        background: url(#{'../pictures/card-back.jpg'});  
+        background-position: left;
+        background-repeat: no-repeat;
+        background-position:center;
         align-items: center; 
         padding: 0px !important;  
-        img{  
-    padding-left: 0vh !important; 
+        max-height: clamp(300px, 300px, 300px) !important; 
+        max-width: clamp(350px, 350px,350px) !important;  
+        min-height: clamp(300px, 300px, 300px) !important;  
+        min-width: clamp(350px, 350px, 350px) !important; 
+        img{   
+        max-height: clamp(200px, 200px, 200px) !important; 
+        max-width: clamp(200px, 200px,200px) !important; 
+    padding-left: 0vh !important;  
     align-self: center;
-    width: 500px; 
     
 }
     }
