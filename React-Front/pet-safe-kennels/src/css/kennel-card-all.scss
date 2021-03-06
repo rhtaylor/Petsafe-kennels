@@ -1,8 +1,10 @@
+#kennel_slide{ 
+    display: flex !important;
 .parentDog{
     display:inline-block !important; 
     .myKennels{  
         
-        padding-bottom: 10%;
+       
         div{
             max-height: clamp(200px, 200px, 200px) !important; 
             max-width: clamp(200px, 200px,200px) !important; 
@@ -26,3 +28,4 @@
 }
     }
 } 
+}

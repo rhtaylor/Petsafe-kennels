@@ -16,9 +16,9 @@ export default class AllDogKennelsPage extends Component{
        return DOGARRAY.map((k,i) => <DogKennel kennel={k}/>)
    }
     render(){
-        return(<span>
+        return(<div id="kennel_slide">
             {this.make_kennels()} 
         
-        </span>)
+        </div>)
     }
 } 
