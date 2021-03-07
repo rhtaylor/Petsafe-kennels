@@ -16,10 +16,16 @@ export default class AllDogKennelsPage extends Component{
            back: 'none',
            }
     this.make_kennels = this.make_kennels.bind(this) 
-    
-    } 
+    this.flipKennel = this.flipKennel.bind(this)
+    }  
+   flipKennel(e){
+    e.preventDefault()
+    debugger
+   } 
    make_kennels(){
-       return DOGARRAY.map((k,i) => <span><DogKennel kennel={k}/><DogKennelBack display={this.state.back} kennel={k}/></span>)
+       return DOGARRAY.map((k,i) => <span><DogKennel kennel={k} 
+           clickMe={e => this.flipKennel(e)}
+       /><DogKennelBack display={this.state.back} kennel={k}/></span>)
    }
     render(){
         return(<div id="kennel_slide">

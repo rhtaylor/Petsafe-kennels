@@ -11,7 +11,9 @@ export default class DogKennel extends Component{
     
     render(){
         return(
-            <div className="parentDog" key={this.props.kennel.title[0]}>
+            <div className="parentDog" key={this.props.kennel.title[0]} 
+                onClick={e => this.props.clickMe(e)} 
+            >
                     <div className="myKennels" key={this.props.kennel[1]}>
                         <h3>{this.props.kennel.title}</h3>
                         <ul>
