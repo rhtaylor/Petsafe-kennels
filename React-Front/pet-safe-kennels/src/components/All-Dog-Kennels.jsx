@@ -42,12 +42,12 @@ export default class AllDogKennelsPage extends Component{
     let savedTarget = e.currentTarget
     e.persist()  
       
-    this.custom_class[savedTarget.id].i = {display: 'none', back: 'show'}
+       this.custom_class[savedTarget.id].i = { display: 'none', back: 'kennel_back'}
 
     this.setState((preS)=>{ 
         return { [savedTarget.id]:{ 
         id:  savedTarget.id,   
-        i: { 'display': 'none', 'back': 'show'} 
+            i: { 'display': 'none', 'back': 'show', "visibility": 'hidden'} 
     } 
 
 }}
