@@ -11,7 +11,7 @@ export default class BigKennelBack extends Component{
         
         e.preventDefault() 
         debugger
-        this.props.push.push('BigDogKennels')
+        this.props.push.push('Contact')
 
     }
     render(){           
