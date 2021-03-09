@@ -19,7 +19,7 @@ export default class DogKennel extends Component{
     render(){ 
         debugger
         return(
-            <div  id={this.props.id} key={this.props.custom_class} 
+            <div  id={this.props.id} key={this.props.custom_class[this.props.id].i.display} 
                 onClick={e => this.props.clickMe(e)}  
                 className="parentDog" 
                >
