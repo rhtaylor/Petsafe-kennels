@@ -22,12 +22,12 @@ export default class AllDogKennelsPage extends Component{
     this.make_kennels = this.make_kennels.bind(this) 
     this.flipKennel = this.flipKennel.bind(this) 
        this.custom_class = {
-           0:{i:{display: 'myKennels'}},1:{i:{display: 'myKennels'}},2:{i:{display: 'myKennels'}}, 3:{i: {display:'myKennels'}}
+           0: { i: { display: 'myKennels', back: 'none' } }, 1: { i: { display: 'myKennels', back: 'none' } }, 2: { i: { display: 'myKennels', back: 'none' } }, 3: { i: { display: 'myKennels', back: 'none'}}
        }
     }
     static getDerivedStateFromProps(props, state) { 
     let new_array= DOGARRAY.map((k,i)=>{ 
-        return { id: i, i: { display: 'myKennels'} }
+        return { id: i, i: { display: 'myKennels', back: 'none'} }
     }) 
     debugger
     return new_array 
@@ -42,12 +42,12 @@ export default class AllDogKennelsPage extends Component{
     let savedTarget = e.currentTarget
     e.persist()  
       
-    this.custom_class[savedTarget.id].i.display = 'none' 
+    this.custom_class[savedTarget.id].i = {display: 'none', back: 'show'}
 
     this.setState((preS)=>{ 
         return { [savedTarget.id]:{ 
         id:  savedTarget.id,   
-        i: { 'display': 'none'} 
+        i: { 'display': 'none', 'back': 'show'} 
     } 
 
 }}
@@ -60,7 +60,7 @@ debugger
        return DOGARRAY.map((k,i) => <span id={i} key={i}><DogKennel my_state={this.state} id={i} kennel={k} 
            clickMe={e => this.flipKennel(e)} 
            custom_class={this.custom_class}
-       /><DogKennelBack display={this.state} kennel={k}/></span>)
+       /><DogKennelBack display={this.state} id={i} custom_class={this.custom_class} kennel={k}/></span>)
    }
     render(){
         return(<div id="kennel_slide">
