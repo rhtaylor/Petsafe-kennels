@@ -1,5 +1,4 @@
 import React, { Component } from 'react'  
-
 import kennel from './kennel.jpg'  
 import Kennel from './Kennel.jsx' 
 import home from './favicon.ico'; 
