@@ -39,7 +39,7 @@ export default class Contact extends Component{
             <p>Contact info</p>
             <p id="call">please call: 520-730-7020</p>  
             <p id="highlight">Important: Pet-Safe-Kennels Custom builds kennels by hand with wielders. These craftsmen
-            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is $2000. However that is also the price of a purebred pitbull. These kennels will outlast your car.</p>
+            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is $2400. However that is also the price of a purebred pitbull. These kennels will outlast your car.</p>
         </div>)
     }
 }

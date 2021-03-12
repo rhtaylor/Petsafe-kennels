@@ -75,7 +75,9 @@ export default class Home extends Component{
                 <ContactUs display={{display: this.state.display}} stateToProp={this.state.direction} history={this.props.history} 
                         updateForm={this.updateForm}
                 />
-                <h1>Call Us: 520-730-7020</h1>
+                <h1>Call Us: 520-730-7020</h1> 
+                <h1 className="small">Custom Built Kennels Designed To Keep Pets Safe!</h1> 
+                    <h1 className="small">Choose your style of custom fabricated lifting lids and dog doors</h1>
             </footer>  
             </div>
         )

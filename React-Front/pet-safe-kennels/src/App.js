@@ -27,9 +27,9 @@ class App extends Component{
        <Route path='/' component={NavBar} />
        <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 
        <Route path='/Kennel' component={Kennel} />  
-       <Route exact path='/SmallDogKennels' render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> 
-       <Route exact path='/BigDogKennels' render={ (routerProps) => <BigDogKennels {...routerProps}/>} />
-       <Route path='/DogRun' component={DogRun} /> 
+      <Route exact path='/SmallDogKennels' component={Contact} /> {/*render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> */}
+      <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
+      <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
        <Route path='/Contact' component={Contact} />
      </Router>
      </header>

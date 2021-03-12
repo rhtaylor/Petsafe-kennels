@@ -29,4 +29,40 @@ h1{
 } 
 #sub-kennel{
     display: flex;
-}
+} 
+
+@media only screen and (min-width: 360px) and (max-width: 1000px){ 
+  .small{
+      font-weight: bold;
+      font-family: serif; 
+      color: burlywood; 
+      padding-right: 10%;
+  }
+  body {
+    background-color: rgb(25, 39, 44);  
+  } 
+  .container{
+      display: flex;
+  }
+    .navbar{
+        display: none;
+    } 
+   
+    #kennel_slide{
+        display: none; 
+        background: url(#{'./pictures/lowProfileDogKennel.jpg'});  
+        background-repeat: no-repeat;
+        background-position: right center; 
+        
+    } 
+    .myKennels{
+        display: none;
+    } 
+    img{ 
+        justify-content: center;
+         width: 150px; 
+         padding-left: 0%; 
+         padding: 0% !important;  
+         margin: 0%;
+    }
+  }

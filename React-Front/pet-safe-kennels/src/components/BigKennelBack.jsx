@@ -21,7 +21,6 @@ export default class BigKennelBack extends Component{
             <p>Our Big Dog model will keep your Big Dog Happy.</p> 
             <ul><li>Extra Space for Play</li>
                 <li>Full Door from for Owners+Dogs.</li>
-                <li>Can connect to your house via a doggy door.</li>
                 <li><KennelBtn myroute={this.myRouting} /></li>
             </ul> 
         </div>)
