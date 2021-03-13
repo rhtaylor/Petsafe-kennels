@@ -11,7 +11,7 @@ import Button from './Button.jsx'
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';  
 import ContactUs from './EmailForm.jsx'
 import AllDogKennelsPage from './components/All-Dog-Kennels';
-
+import styles from './home.scss';
 const URL = 'http://localhost:3001/Kennel' 
 
 export default class Home extends Component{
