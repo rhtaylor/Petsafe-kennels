@@ -32,17 +32,33 @@ h1{
 } 
 
 @media only screen and (min-width: 360px) and (max-width: 1000px){ 
-  .small{
+    #container{
+         
+        h1{ 
+            padding-left: 30%; 
+            
+        }
+    button.button{
+                margin-left: 30%;
+            }
+    }
+      .small{
       font-weight: bold;
       font-family: serif; 
       color: burlywood; 
-      padding-right: 10%;
+      padding-right: 10%; 
+      *{
+          padding-left: 0vh;
+
+      }
   }
   body {
     background-color: rgb(25, 39, 44);  
+    width: 100%;
   } 
   .container{
-      display: flex;
+      display: flex; 
+      
   }
     .navbar{
         display: none;
@@ -52,17 +68,57 @@ h1{
         display: none; 
         background: url(#{'./pictures/lowProfileDogKennel.jpg'});  
         background-repeat: no-repeat;
-        background-position: right center; 
+        background-position: right center !important; 
         
     } 
     .myKennels{
         display: none;
     } 
     img{ 
-        justify-content: center;
-         width: 150px; 
+        justify-content: center !important;
+         display: none;
          padding-left: 0%; 
          padding: 0% !important;  
          margin: 0%;
     }
   }
+
+// @media only screen and (min-width: 1000px) and (max-width: 1500px){ 
+//      .small{
+//       font-weight: bold;
+//       font-family: serif; 
+//       color: burlywood; 
+//       padding-right: 10%;
+//   }
+//   body {
+//     background-color: rgb(25, 39, 44);   
+//     width: 30%;
+//   } 
+//   .container{
+//       display: flex; 
+      
+//   }
+//     .navbar{
+//         display: none;
+//     } 
+   
+//     #kennel_slide{
+//         display: none; 
+//         background: url(#{'./pictures/lowProfileDogKennel.jpg'});  
+//         background-repeat: no-repeat;
+//         background-position: right center !important; 
+        
+//     } 
+//     .myKennels{
+//         display: none;
+//     } 
+//     img{ 
+//         justify-content: center !important;
+//         display: none;
+//         width: 50px;
+//          padding-left: 0%; 
+//          padding: 0% !important;  
+//          margin: 0%;
+//     }
+//   } 
+

@@ -77,7 +77,8 @@ export default class Home extends Component{
                 />
                 <h1>Call Us: 520-730-7020</h1> 
                 <h1 className="small">Custom Built Kennels Designed To Keep Pets Safe!</h1> 
-                    <h1 className="small">Choose your style of custom fabricated lifting lids and dog doors</h1>
+                    <h1 className="small">Choose your style of custom fabricated dog crates, kennels, and dog runs</h1>
+                    <h1 className="small">We are the Premier Predator Proof Kennel Builders in Arizona.</h1>
             </footer>  
             </div>
         )
