@@ -27,9 +27,7 @@ h1{
 }
 
 h1.small{
-    padding-left: 2em; 
-    font-family: serif; 
-    color: burlywood; 
+    display: none; 
 
 }
 } 
@@ -42,10 +40,12 @@ h1.small{
         h1{
             padding-left: 3em;
         } 
-        h1.small{ 
+        h1.small{  
+            display: flex;
             padding-left: 1em;  
             overflow-wrap: break-word;
-            
+            font-family: serif; 
+            color: burlywood; 
         }
     button.button{
                 margin-left: 30%;
