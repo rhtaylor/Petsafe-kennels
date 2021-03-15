@@ -34,7 +34,7 @@ h1.small{
     display: flex;
 } 
 
-@media only screen and (max-width: 360px){ 
+@media only screen and (min-width: 360px) and (max-width: 1040px){ 
     #container{
         h1{
             padding-left: 3em;
