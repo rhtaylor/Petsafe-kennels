@@ -8,6 +8,7 @@ import DogRun from './DogRun.jsx'
 import Contact from './Contact.jsx'
 import SmallDogKennels from './components/SmallDogKennels';
 import BigDogKennels from './components/BigDogKennels';
+import AdminDashboard from './components/AdminDashboard';
 
 class App extends Component{ 
   componentDidMount(){
@@ -27,10 +28,11 @@ class App extends Component{
        <Route path='/' component={NavBar} />
        <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 
        <Route path='/Kennel' component={Kennel} />  
-      <Route exact path='/SmallDogKennels' component={Contact} /> {/*render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> */}
-      <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
-      <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
-       <Route path='/Contact' component={Contact} />
+       <Route exact path='/SmallDogKennels' component={Contact} /> {/*render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> */}
+       <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
+       <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
+       <Route path='/Contact' component={Contact} /> 
+       <Route exact path='/Admin' component={AdminDashboard} />
      </Router>
      </header>
     );
