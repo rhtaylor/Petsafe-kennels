@@ -8,7 +8,8 @@ import DogRun from './DogRun.jsx'
 import Contact from './Contact.jsx'
 import SmallDogKennels from './components/SmallDogKennels';
 import BigDogKennels from './components/BigDogKennels';
-import AdminDashboard from './components/AdminDashboard';
+import AdminDashboard from './components/AdminDashboard'; 
+import SecurityCheck from './components/AdminCheck'
 
 class App extends Component{ 
   componentDidMount(){
@@ -32,7 +33,7 @@ class App extends Component{
        <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
        <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
        <Route path='/Contact' component={Contact} /> 
-       <Route exact path='/Admin' component={AdminDashboard} />
+      <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
      </Router>
      </header>
     );
