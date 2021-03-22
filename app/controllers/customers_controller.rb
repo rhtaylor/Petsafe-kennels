@@ -1,11 +1,11 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-
+  attr_accessor :customer, :kennel 
 
   #admin route will render special page for amin
   def admin 
     @customers = Customer.all
-    @associatedInfo = @customers.map{ |cus| [customer: cus, kennel: cus.kennels]} 
+    @associatedInfo = @customers.map{ |cus| {customer: cus, kennel: cus.kennels} } 
     respond_to do |format|
       format.json { render :json => @associatedInfo } 
     end
