@@ -6,11 +6,9 @@
   <thead>
     <tr>
       <th>Kennel type</th>
-      <th>Materials</th>
-      <th>Cost</th>
-      <th>Labor</th>
-      <th>Charge</th>
-      <th>Date</th>
+      <th>Material cost</th>
+      <th>Labor cost</th>
+      <th>Price</th>
       <th>Customer</th>
       <th colspan="3"></th>
     </tr>
@@ -20,11 +18,9 @@
     <% @kennels.each do |kennel| %>
       <tr>
         <td><%= kennel.kennel_type %></td>
-        <td><%= kennel.materials %></td>
-        <td><%= kennel.cost %></td>
-        <td><%= kennel.labor %></td>
-        <td><%= kennel.charge %></td>
-        <td><%= kennel.date %></td>
+        <td><%= kennel.material_cost %></td>
+        <td><%= kennel.labor_cost %></td>
+        <td><%= kennel.price %></td>
         <td><%= kennel.customer_id %></td>
         <td><%= link_to 'Show', kennel %></td>
         <td><%= link_to 'Edit', edit_kennel_path(kennel) %></td>

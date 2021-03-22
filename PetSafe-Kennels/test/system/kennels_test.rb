@@ -14,13 +14,11 @@ class KennelsTest < ApplicationSystemTestCase
     visit kennels_url
     click_on "New Kennel"
 
-    fill_in "Charge", with: @kennel.charge
-    fill_in "Cost", with: @kennel.cost
     fill_in "Customer", with: @kennel.customer_id
-    fill_in "Date", with: @kennel.date
     fill_in "Kennel type", with: @kennel.kennel_type
-    fill_in "Labor", with: @kennel.labor
-    fill_in "Materials", with: @kennel.materials
+    fill_in "Labor cost", with: @kennel.labor_cost
+    fill_in "Material cost", with: @kennel.material_cost
+    fill_in "Price", with: @kennel.price
     click_on "Create Kennel"
 
     assert_text "Kennel was successfully created"
@@ -31,13 +29,11 @@ class KennelsTest < ApplicationSystemTestCase
     visit kennels_url
     click_on "Edit", match: :first
 
-    fill_in "Charge", with: @kennel.charge
-    fill_in "Cost", with: @kennel.cost
     fill_in "Customer", with: @kennel.customer_id
-    fill_in "Date", with: @kennel.date
     fill_in "Kennel type", with: @kennel.kennel_type
-    fill_in "Labor", with: @kennel.labor
-    fill_in "Materials", with: @kennel.materials
+    fill_in "Labor cost", with: @kennel.labor_cost
+    fill_in "Material cost", with: @kennel.material_cost
+    fill_in "Price", with: @kennel.price
     click_on "Update Kennel"
 
     assert_text "Kennel was successfully updated"

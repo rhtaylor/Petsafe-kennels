@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
-    <%= favicon_link_tag %> 
+  <head>
     <title>PetSafeKennels</title>
-    <div class="HOME">
-
-     
-    
-    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-      
-    </head>
+  </head>
 
   <body>
     <%= yield %>

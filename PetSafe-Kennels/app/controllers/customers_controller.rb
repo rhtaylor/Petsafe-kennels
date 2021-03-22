@@ -1,10 +1,23 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  attr_accessor :customer, :kennel 
 
+  #admin route will render special page for amin
+  def admin 
+    @customers = Customer.all
+    @associatedInfo = @customers.map{ |cus| {customer: cus, kennel: cus.kennels} } 
+    respond_to do |format|
+      format.json { render :json => @associatedInfo } 
+    end
+  end 
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.all 
+    respond_to do |format|
+      format.json { render :json => @customers } 
+    
+  end
   end
 
   # GET /customers/1
@@ -69,6 +82,6 @@ class CustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def customer_params
-      params.require(:customer).permit(:name, :city, :email, :phone, :password_digest)
+      params.require(:customer).permit(:name, :number, :email, :city)
     end
 end

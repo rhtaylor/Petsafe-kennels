@@ -17,7 +17,7 @@ class KennelsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create kennel" do
     assert_difference('Kennel.count') do
-      post kennels_url, params: { kennel: { charge: @kennel.charge, cost: @kennel.cost, customer_id: @kennel.customer_id, date: @kennel.date, kennel_type: @kennel.kennel_type, labor: @kennel.labor, materials: @kennel.materials } }
+      post kennels_url, params: { kennel: { customer_id: @kennel.customer_id, kennel_type: @kennel.kennel_type, labor_cost: @kennel.labor_cost, material_cost: @kennel.material_cost, price: @kennel.price } }
     end
 
     assert_redirected_to kennel_url(Kennel.last)
@@ -34,7 +34,7 @@ class KennelsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update kennel" do
-    patch kennel_url(@kennel), params: { kennel: { charge: @kennel.charge, cost: @kennel.cost, customer_id: @kennel.customer_id, date: @kennel.date, kennel_type: @kennel.kennel_type, labor: @kennel.labor, materials: @kennel.materials } }
+    patch kennel_url(@kennel), params: { kennel: { customer_id: @kennel.customer_id, kennel_type: @kennel.kennel_type, labor_cost: @kennel.labor_cost, material_cost: @kennel.material_cost, price: @kennel.price } }
     assert_redirected_to kennel_url(@kennel)
   end
 

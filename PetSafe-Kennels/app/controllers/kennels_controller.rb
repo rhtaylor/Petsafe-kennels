@@ -6,10 +6,7 @@ class KennelsController < ApplicationController
   def index
     @kennels = Kennel.all
   end
-  
-  def home 
-    
-  end
+
   # GET /kennels/1
   # GET /kennels/1.json
   def show
@@ -72,6 +69,6 @@ class KennelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kennel_params
-      params.require(:kennel).permit(:kennel_type, :materials, :cost, :labor, :charge, :date, :customer_id)
+      params.require(:kennel).permit(:kennel_type, :material_cost, :labor_cost, :price, :customer_id)
     end
 end

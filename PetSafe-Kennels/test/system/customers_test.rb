@@ -17,8 +17,7 @@ class CustomersTest < ApplicationSystemTestCase
     fill_in "City", with: @customer.city
     fill_in "Email", with: @customer.email
     fill_in "Name", with: @customer.name
-    fill_in "Password digest", with: @customer.password_digest
-    fill_in "Phone", with: @customer.phone
+    fill_in "Number", with: @customer.number
     click_on "Create Customer"
 
     assert_text "Customer was successfully created"
@@ -32,8 +31,7 @@ class CustomersTest < ApplicationSystemTestCase
     fill_in "City", with: @customer.city
     fill_in "Email", with: @customer.email
     fill_in "Name", with: @customer.name
-    fill_in "Password digest", with: @customer.password_digest
-    fill_in "Phone", with: @customer.phone
+    fill_in "Number", with: @customer.number
     click_on "Update Customer"
 
     assert_text "Customer was successfully updated"

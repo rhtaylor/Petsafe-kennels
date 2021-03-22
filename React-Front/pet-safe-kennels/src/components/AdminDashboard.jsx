@@ -13,8 +13,7 @@ export default class AdminDashboard extends Component{
         return(<div>
                 <ul>
                {this.state.customers.map(person =>{ return (<div key={this.state.customers.customer}><ul><li>{person.customer.name}</li><li>{person.customer.number}</li></ul>
-                    
-                    <ul>{person.kennel.map(k=> <li>{k.kennel_type}</li>) }</ul>
+                     <ul>{ person.kennel.map((k)=> <li>{k.kennel_type}</li>) }</ul>
                    <br/>
                    </div>)})
                     

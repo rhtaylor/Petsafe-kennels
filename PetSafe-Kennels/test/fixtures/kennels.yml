@@ -2,18 +2,14 @@
 
 one:
   kennel_type: MyString
-  materials: MyText
-  cost: 
-  labor: 
-  charge: 
-  date: 2020-12-15 13:12:19
+  material_cost: 
+  labor_cost: 
+  price: 
   customer: one
 
 two:
   kennel_type: MyString
-  materials: MyText
-  cost: 
-  labor: 
-  charge: 
-  date: 2020-12-15 13:12:19
+  material_cost: 
+  labor_cost: 
+  price: 
   customer: two

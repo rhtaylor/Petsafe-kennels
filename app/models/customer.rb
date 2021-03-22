@@ -1,3 +1,6 @@
+require 'bcrypt'
 class Customer < ApplicationRecord 
-    has_many :kennels
+    include BCrypt
+    has_many :kennels 
+    has_secure_password 
 end
