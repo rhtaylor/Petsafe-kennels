@@ -1,12 +1,22 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
+
+  #admin route will render special page for amin
+  def admin 
+    @customers = Customer.all
+    @associatedInfo = @customers.map{ |cus| [customer: cus, kennel: cus.kennels]} 
+    respond_to do |format|
+      format.json { render :json => @associatedInfo } 
+    end
+  end 
   # GET /customers
   # GET /customers.json
   def index
     @customers = Customer.all 
     respond_to do |format|
-     format.json { render :json => @customers }
+      format.json { render :json => @customers } 
+    
   end
   end
 

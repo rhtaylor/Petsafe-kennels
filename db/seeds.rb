@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Customer.create([{name: 'John Taylor', number: 5207307020, email: 'jackisbusy@gmail.com', city: 'Phoenix'},
-                {name: "Tom Burger", number: 5555555555, email: 'moneyman', city: 'Glendale'}]) 
-Kennel.create([{kennel_type: 'Dog Run', cost_material: 30000, cost_labor: 5000, date: Date.current, customers_id: 1},   
-                {kennel_type: 'Cool Kennel', cost_material: 50000, cost_labor: 3000, date: Date.current, customers_id: 2}])
+# Customer.create([{name: 'John Taylor', number: 5207307020, email: 'jackisbusy@gmail.com', city: 'Phoenix'},
+#                 {name: "Tom Burger", number: 5555555555, email: 'moneyman', city: 'Glendale'}]) 
+Kennel.create([{kennel_type: 'Dog Run', material_cost: 30000, labor_cost: 5000, price: 20000, customer_id: 6},   
+                {kennel_type: 'Cool Kennel', material_cost: 50000, labor_cost: 3000, price: 50000, customer_id: 7}])
