@@ -34,6 +34,7 @@ class App extends Component{
        <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
        <Route path='/Contact' component={Contact} /> 
       <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
+      <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
      </Router>
      </header>
     );
