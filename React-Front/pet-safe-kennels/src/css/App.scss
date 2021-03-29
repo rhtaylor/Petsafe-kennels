@@ -1,6 +1,7 @@
 @media only screen and (min-width: 360px) and (max-width: 1040px){ 
 .App-header{ 
     // background: url(#{'../pictures/puppy.jpg'}) !important;
+    display: block;
     background-repeat: no-repeat;
     background-position:center;
     max-height: clamp(350px, 350px, 350px); 
