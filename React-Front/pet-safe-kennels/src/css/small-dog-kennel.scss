@@ -1,9 +1,16 @@
 .Dog{
     display: block; 
-    align-content: center;
+    align-content: center; 
+    @media only screen and (min-width: 360px) and (max-width: 1040px){  
+        p{
+            color:wheat;
+        }
+    }
 }
 
-p{
+p{ 
+
+
         margin-bottom: 0px;
     }
 #small-dog-kennel {   
@@ -21,7 +28,7 @@ p{
     margin-left: 10vh;  
     margin-right: clamp(70vh, 70vh, 70vh);
     p{
-        color: rgb(216, 160, 178); 
+        color: rgb(74, 252, 237); 
         text-align: center; 
         font-weight: bold; 
        
@@ -29,9 +36,19 @@ p{
     #bottom{
         padding-top: 18vh; 
         
-    }
+    } 
+   @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    margin-left: 0px; 
+    margin-right: 0px;  
+    margin-left: 0px; 
+}
 } 
- #small-dog-kennel-back{ 
+ #small-dog-kennel-back{   
+     @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    margin-left: 0px; 
+    margin-right: 0px;  
+    margin-left: 0px; 
+}
     cursor: pointer;
     background: url(#{'../pictures/card-back.jpg'}); 
     background-repeat: no-repeat;
@@ -59,7 +76,7 @@ p{
         font-size: medium;
         border-radius: 3px;  
         background-color: rgb(255, 60, 0);
-        box-shadow: 2px 3px rgb(202, 138, 138);
+        box-shadow: 2px 3px rgb(255, 137, 137);
     }
     #more:hover{
         cursor: pointer;

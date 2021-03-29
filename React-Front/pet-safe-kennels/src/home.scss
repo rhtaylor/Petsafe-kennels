@@ -32,7 +32,10 @@ h1.small{
 }
 } 
 #sub-kennel{
-    display: flex;
+    display: flex; 
+    @media only screen and (min-width: 360px) and (max-width: 1040px){  
+        display: block;
+    }
 } 
 
 @media only screen and (min-width: 360px) and (max-width: 1040px){ 
