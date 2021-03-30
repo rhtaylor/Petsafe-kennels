@@ -22,9 +22,10 @@ class App extends Component{
     })
     .then(data => console.log(data)) 
     .catch(err => console.log(err))
-  }
+  } 
+    
   render(){
-  return (<header className="App-header">
+  return (<header className="App-header" >
        <Router>
        <Route path='/' component={NavBar} />
        <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 

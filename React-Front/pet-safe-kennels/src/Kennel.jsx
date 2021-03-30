@@ -37,7 +37,7 @@ export default class Kennel extends Component{
     if (BigBack == 'none') { BigBack = 'show' } else { BigBack = 'none' }   
     
     }
-debugger
+
     return this.setState({front: front , back: back, BigFront: BigFront, BigBack: BigBack}) 
         
         
@@ -55,5 +55,8 @@ debugger
             </div>
         </div>
         )
+    } 
+    componentDidMount(){
+        
     }
 }

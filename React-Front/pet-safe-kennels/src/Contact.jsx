@@ -35,11 +35,11 @@ export default class Contact extends Component{
             <ContactUs display={{ display: this.state.display }} stateToProp={this.state.direction} history={this.props.history}
                 updateForm={this.updateForm}
             /> 
-            <p>Phone calls are the preferred way to communicate with us.</p> 
-            <p>Contact info</p>
-            <p id="call">please call: 520-730-7020</p>  
-            <p id="highlight">Important: Pet-Safe-Kennels Custom builds kennels by hand with wielders. These craftsmen
-            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is $2400. However that is also the price of a purebred pitbull. These kennels will outlast your car.</p>
+            <h2>Phone calls are the preferred way to communicate with us.</h2> 
+            <h3>Contact info</h3>
+            <h3 id="call">please call: 520-730-7020</h3>  
+            <h3 id="highlight">Important: Pet-Safe-Kennels Custom builds kennels by hand with wielders. These craftsmen
+            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is $2400. However that is also the price of a purebred pitbull. These kennels will outlast your car.</h3>
         </div>)
     }
 }

@@ -58,9 +58,11 @@ button.button{
     padding-left: 0px;
     margin-left: 1px; 
     max-width: auto; 
-    p{   max-width: clamp(360px, 360px,360px); 
+    h3{   max-width: clamp(360px, 360px,360px); 
          margin-left: 1%; 
-         color: burlywood; 
+         color:wheat;
+         font-weight: bolder;
+         text-shadow: 2px  rgb(255, 221, 154);
          font-family: serif;
          overflow-wrap: break-word;
     }
