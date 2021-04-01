@@ -2,6 +2,7 @@
     display: block; 
     align-content: center; 
     @media only screen and (min-width: 360px) and (max-width: 1040px){  
+        
         p{
             color: burlywood; 
         }
@@ -19,7 +20,12 @@ p{
     background: url(#{'../pictures/lowProfileDogKennel.jpg'}); 
     background-repeat: no-repeat;
     background-position:center;
-    
+    @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+}
     max-width: clamp(450px, 450px,450px); 
     min-width: clamp(450px, 450px,450px);  
     max-height: clamp(350px, 350px, 350px); 
@@ -45,9 +51,13 @@ p{
 } 
  #small-dog-kennel-back{   
      @media only screen and (min-width: 360px) and (max-width: 1040px){ 
-    margin-left: 0px; 
+    margin-left: 0px;  
     margin-right: 0px;  
     margin-left: 0px; 
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
 }
     cursor: pointer;
     background: url(#{'../pictures/card-back.jpg'}); 
@@ -56,7 +66,7 @@ p{
     max-height: clamp(350px, 350px, 350px); 
     min-height: clamp(350px, 350px, 350px);  
     max-width: clamp(450px, 450px,450px); 
-   
+    
     margin-right: 70vh;   
     margin-left: 10vh; 
     * {
