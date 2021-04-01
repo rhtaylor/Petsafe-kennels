@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home.jsx'
 import NavBar from './NavBar.jsx' 
 import Kennel from './Kennel.jsx' 
-import DogRun from './DogRun.jsx' 
+import DogRun from './components/DogRun.jsx' 
 import Contact from './Contact.jsx'
 import SmallDogKennels from './components/SmallDogKennels';
 import BigDogKennels from './components/BigDogKennels';
@@ -32,7 +32,7 @@ class App extends Component{
        <Route path='/Kennel' component={Kennel} />  
        <Route exact path='/SmallDogKennels' component={Contact} /> {/*render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> */}
        <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
-       <Route path='/DogRun' component={Contact} /> {/*component={DogRun} />*/} 
+       <Route path='/DogRun' component={DogRun} />
        <Route path='/Contact' component={Contact} /> 
       <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
       <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
