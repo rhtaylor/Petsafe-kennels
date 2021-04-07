@@ -81,3 +81,16 @@ body{
     max-width: 450px; 
     min-width: 450px;   
     } 
+@media only screen and (min-width: 360px) and (max-width: 1040px){ 
+#all-arizona-runs{ 
+    background: url(#{$url2}); 
+    display: flex; 
+    max-height: 450px; 
+    min-height: 450px; 
+    max-width: 450px; 
+    min-width: 450px; 
+    background-repeat: no-repeat;
+    background-position:center;
+    
+}   
+}
