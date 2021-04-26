@@ -7,7 +7,8 @@ import Kennel from './Kennel.jsx'
 import DogRun from './components/DogRun.jsx' 
 import Contact from './Contact.jsx'
 import SmallDogKennels from './components/SmallDogKennels';
-import BigDogKennels from './components/BigDogKennels';
+import BigDogKennels from './components/BigDogKennels'; 
+import LowProfilePhoenixKennel from './components/LowProfilePhoenixKennel.jsx'
 import AdminDashboard from './components/AdminDashboard'; 
 import SecurityCheck from './components/AdminCheck'
 
@@ -31,6 +32,7 @@ class App extends Component{
        <Route exact path='/' render={(routerProps)=> <Home {...routerProps} />} /> 
        <Route path='/Kennel' component={Kennel} />  
        <Route exact path='/SmallDogKennels' component={Contact} /> {/*render={ (routerProps) => <SmallDogKennels {...routerProps} />} /> */}
+       <Route exact path='/LowProfilePhoenixKennel' render={(routerProps) => <LowProfilePhoenixKennel {...routerProps} /> } />
        <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
        <Route path='/DogRun' component={DogRun} />
        <Route path='/Contact' component={Contact} /> 

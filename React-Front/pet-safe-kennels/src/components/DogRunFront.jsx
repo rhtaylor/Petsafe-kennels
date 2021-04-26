@@ -1,32 +1,26 @@
 import React from 'react' 
+import icon from '../pictures/paw.png'
 import { Component } from 'react';
 import '../css/dogrun.scss'
 export default class DogRunFront extends Component{
     constructor(props) {
-        super(props) 
-        this.openUP = this.openUP.bind(this)
-        this.state = {
-            'min-width': '400px',
-            position: 'relative', 
-            'z-index': 0
-            
-        }
-    } 
-    openUP(e){
-        this.setState({'min-width': '50em', 'z-index': 15, 'position': 'fixed'}) 
-
+        super(props)
+        
     }
     render(){ 
         debugger
-        return(<div className="custom-kennels"
-                id={this.props.name}
-                // onClick={(e)=>this.openUP(e) }
-                style={{'maxWidth': this.props.picture, position: this.props.pos }} 
-                key={this.state['min-width']}> 
-                <img style={{'min-width': this.state['min-width'], 'z-index': this.state['z-index']}} src={this.props.pic}></img>
-                {/* <p className="dog_run">Click to Open Dog Run</p> */}
-                <p>&nbsp;</p>
-            </div>
+         return(
+
+                <div className="custom-kennels"
+                id={this.props.name} 
+                onClick={ e=> this.props.openPic(e) }
+                 style={{ 'maxWidth': this.props.picture, position: this.props.position }}
+                key={this.props.pic} > 
+                <img id="img" style={{width: this.props.display, position: this.props.position}} src={this.props.pic}></img>
+                
+
+            </div> 
+             
         )
     }
 }

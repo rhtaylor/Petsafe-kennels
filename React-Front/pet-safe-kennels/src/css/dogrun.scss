@@ -1,6 +1,9 @@
 $url1: '../pictures/9FTX9FT-Run.jpg'; 
 $url2: '../pictures/12FTX12FTwith-Tunnel.jpg';
 $url3: '../pictures/Gilbert-AZ-Kennels-2.jpg';
+#img{
+   margin-left: 5px;
+}
 body{
    overflow-x: hidden; 
    min-height: 100%
@@ -29,8 +32,10 @@ body{
    
    .custom-kennels{
       overflow: hidden; 
-      overflow-x: hidden;
-   }
+      overflow-x: hidden; 
+
+   } 
+
 }   
 .custom-kennels{ 
        display: flex;  
@@ -44,8 +49,10 @@ body{
     max-width: 400px; 
     
        }
-   } 
-
+   }  
+   .custom-kennels:hover{
+         cursor: pointer;
+   }
    .dog_run{
       position: fixed;
    }

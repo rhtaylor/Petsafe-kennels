@@ -23,10 +23,11 @@ export default class DogRun extends Component{
 
     static getDerivedStateFromProps(props, state) {
         let new_array = RUNS.map((k, i) => {
-            return { id: i, i: { display: 'myKennels'} }
+            return { id: i, [i]: { display: 'myKennels', position: 'absolute'} }
         }) 
     }
-    openPic(e){
+    openPic(e){ 
+        debugger
         e.preventDefault()
         let savedE = e
         let savedTarget = e.currentTarget
@@ -52,14 +53,16 @@ export default class DogRun extends Component{
         })
         
     } 
-    makeRuns(){
+    makeRuns(){ 
+        debugger
         return RUNS.map((runObjects,i) => <span key={i}><DogRunFront flex={i} 
         display={this.state.i}  
         position={this.state.id.position}
         key={this.state.id}
         picture={this.state.picture} pic={runObjects.pic} id={i} name={i} openPic={this.openPic}/></span>)
     }
-    render(){
+    render(){ 
+
         return(
             <div className="dog-run-arizona"> 
                 <h1 id='info'>For your happiest dog</h1>

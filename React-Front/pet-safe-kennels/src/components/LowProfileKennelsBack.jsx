@@ -14,7 +14,7 @@ export default class LowProfileKennelsBack extends Component{
     myRouting(e){ 
         debugger
         e.preventDefault()  
-        this.props.push.push('Contact') 
+        this.props.push.push('LowProfilePhoenixKennel')
         
      }
 

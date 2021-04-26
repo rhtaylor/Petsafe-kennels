@@ -54,14 +54,7 @@ export default class AllDogKennelsPage extends Component{
         return { [savedTarget.id]:{ 
         id:  savedTarget.id,   
             i: this.custom_class[savedTarget.id].i  
-    } 
-
-}}
-
-)
-    
-debugger    
-   } 
+    }}})} 
    make_kennels(){  
        return DOGARRAY.map((k,i) => <span id={i} key={i}><DogKennel my_state={this.state} id={i} kennel={k} 
            clickMe={e => this.flipKennel(e)} 

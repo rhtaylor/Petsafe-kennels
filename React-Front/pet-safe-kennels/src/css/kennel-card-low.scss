@@ -8,7 +8,7 @@ div #kennel_slide{
     padding: 0;
     margin: 0;
     border-collapse: collapse;
-    
+    position: fixed;
     min-height: clamp(300px, 300px, 300px) !important;
     display: flex !important; 
     align-content: center; 
@@ -60,9 +60,7 @@ div #kennel_slide{
     position: absolute;
      
         position: relative;
-        div{
-        background: url(#{'../pictures/card-back.jpg'});   
-        } 
+        
         *{
             color: black; 
 
