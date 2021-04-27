@@ -61,9 +61,11 @@ div #kennel_slide{
      
         position: relative;
         
-        *{
-            color: black; 
-
+        .phoenix_kennels{
+            color: rgba(83, 41, 17, 0.959); 
+            font-weight: bold;
+            font-family:sans-serif;
+            text-shadow:  2px 1px rgba(67, 197, 248, 0.753);
         } 
         
         background-position: left;
