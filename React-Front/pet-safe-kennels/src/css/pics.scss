@@ -4,10 +4,14 @@
     align-items: center;
 } 
 
-#pup > img{ 
+.pup > img{ 
         position: relative;
         margin-top: 2%;
         margin: 2%;
         min-width: 500px;
         max-width: 500px;
+} 
+.kennel{
+    display: flex;
+    flex-direction: row;
 }

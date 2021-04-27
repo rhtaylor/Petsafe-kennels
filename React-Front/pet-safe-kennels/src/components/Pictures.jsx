@@ -20,10 +20,13 @@ import jack from '../pictures/Jaxson_Built_Dog_Kennels.jpg'
 import kennel_heaven from '../pictures/dog_heaven_az.jpg' 
 import custom_shape from '../pictures/custom_shape.jpg' 
 import custom_roof from '../pictures/custom_roof.jpg' 
+import custom_roof_2 from '../pictures/custom_roof_2.jpg'
 import tunnel from '../pictures/Tunnel-5.jpg'
-import welder from '../pictures/welder.jpg'
+import welder from '../pictures/welder.jpg' 
+import fly from '../pictures/Flying-Dog-Kennel.jpg'
 import '../css/pics.scss'
-const GALLERY = [{img: welder}, {img: tunnel}, {img: custom_roof}]
+const GALLERY = [{ img: welder }, { img: tunnel }, { img: custom_roof }, { img: kennel_with_tunnel_az}, {img: kennel_heaven}]
+const GALLERY2 =[{img: custom_shape },{ img: low_best }, { img: custom_roof_2 }, { img: fly }, { img: small}]
 
 
 export default class Pictures extends Component{ 
@@ -31,17 +34,38 @@ export default class Pictures extends Component{
         super(props)
         this.photo_gallery = this.photo_gallery.bind(this) 
         this.change_display = this.change_display.bind(this)
-        this.state = {}
-    } 
+        this.state = { 
+            'maxWidth': "auto", 
+            'min-width': "auto"
+    }
+    }
+    static getDerivedStateFromProps(props, state) {
+       return GALLERY.map((g,i)=>{
+           return { id: i , [i]:{'maxWidth': '500px'}}
+        })
+    }
     change_display(e){
+        let savedE = e
+        let savedTarget = e.currentTarget
+        let currentI = savedTarget.id
+        e.persist()  
+        let answer = (this.state[currentI][currentI]["maxWidth"] == '500px') ? 'none' : '500px'
+
         debugger
+        this.setState(preS=> {
+            return {...preS, id: currentI, 
+            [currentI]:{
+                'maxWidth': answer
+            }
+            }})
     }
     photo_gallery(array){
-      return  array.map(img => <Pic changeDisplay={this.change_display} img={img} />)
+        return array.map((img, id) => <Pic key={this.state[`${id}`]} id={id} maxWidth={this.state[`${id}`][`${id}`]['max-width']} changeDisplay={this.change_display} img={img} />)
     }
     render(){
-        return(<div>
-            <div id="row">{this.photo_gallery(GALLERY)}</div>
+        return(<div className="kennel">
+            {/* <div id="row">{this.photo_gallery(GALLERY)}</div>  */}
+            <div id="row">{this.photo_gallery(GALLERY2)}</div>
         </div>)
     }
 }
