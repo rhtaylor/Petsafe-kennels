@@ -11,7 +11,7 @@ import BigDogKennels from './components/BigDogKennels';
 import LowProfilePhoenixKennel from './components/LowProfilePhoenixKennel.jsx'
 import AdminDashboard from './components/AdminDashboard'; 
 import SecurityCheck from './components/AdminCheck'
-
+import Pictures from './components/Pictures.jsx'
 class App extends Component{ 
   componentDidMount(){
     fetch('http://localhost:3000/customers.json') 
@@ -36,6 +36,7 @@ class App extends Component{
        <Route exact path='/BigDogKennels' component={Contact} /> {/*render={ (routerProps) => <BigDogKennels {...routerProps}/>} /> */}
        <Route path='/DogRun' component={DogRun} />
        <Route path='/Contact' component={Contact} /> 
+       <Route exact path='/Pics' render={(routerProps) => <Pictures {...routerProps} /> } />
       <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
       <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
      </Router>
