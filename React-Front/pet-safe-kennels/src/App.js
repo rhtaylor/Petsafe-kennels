@@ -9,7 +9,9 @@ import Contact from './Contact.jsx'
 import SmallDogKennels from './components/SmallDogKennels';
 import BigDogKennels from './components/BigDogKennels'; 
 import LowProfilePhoenixKennel from './components/LowProfilePhoenixKennel.jsx'
+import HorseShade from './components/HorseShade.jsx'
 import AdminDashboard from './components/AdminDashboard'; 
+
 import SecurityCheck from './components/AdminCheck'
 import Pictures from './components/Pictures.jsx'
 class App extends Component{ 
@@ -37,10 +39,11 @@ class App extends Component{
        <Route path='/DogRun' component={DogRun} />
        <Route path='/Contact' component={Contact} /> 
        <Route exact path='/Pics' render={(routerProps) => <Pictures {...routerProps} /> } />
-      <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
-      <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
-     </Router>
-     </header>
+       <Route exact path='/HorseShade' render={(routerProps)=> <HorseShade {...routerProps} /> } />
+       <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
+       <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
+       </Router>
+      </header>
     );
 }
 }

@@ -20,13 +20,10 @@ import jack from '../pictures/Jaxson_Built_Dog_Kennels.jpg'
 import kennel_heaven from '../pictures/dog_heaven_az.jpg' 
 import custom_shape from '../pictures/custom_shape.jpg' 
 import custom_roof from '../pictures/custom_roof.jpg' 
-import custom_roof_2 from '../pictures/custom_roof_2.jpg'
 import tunnel from '../pictures/Tunnel-5.jpg'
-import welder from '../pictures/welder.jpg' 
-import fly from '../pictures/Flying-Dog-Kennel.jpg'
+import welder from '../pictures/welder.jpg'
 import '../css/pics.scss'
-const GALLERY = [{ img: welder }, { img: tunnel }, { img: custom_roof }, { img: kennel_with_tunnel_az}, {img: kennel_heaven}]
-const GALLERY2 =[{img: custom_shape },{ img: low_best }, { img: custom_roof_2 }, { img: fly }, { img: small}]
+const GALLERY = [{img: welder}, {img: tunnel}, {img: custom_roof}, {img: jack}]
 
 
 export default class Pictures extends Component{ 
@@ -63,9 +60,8 @@ export default class Pictures extends Component{
         return array.map((img, id) => <Pic key={this.state[`${id}`]} id={id} maxWidth={this.state[`${id}`][`${id}`]['max-width']} changeDisplay={this.change_display} img={img} />)
     }
     render(){
-        return(<div className="kennel">
-            {/* <div id="row">{this.photo_gallery(GALLERY)}</div>  */}
-            <div id="row">{this.photo_gallery(GALLERY2)}</div>
+        return(<div>
+            <div id="row">{this.photo_gallery(GALLERY)}</div>
         </div>)
     }
 }

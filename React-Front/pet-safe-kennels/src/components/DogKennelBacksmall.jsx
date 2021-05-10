@@ -22,7 +22,7 @@ export default class DogKennelBackSmall extends Component{
                 key={this.props.kennel[2]}>
                     <h3 className="phoenix_kennels" >{this.props.kennel.title}</h3>
                         <ul>
-                            <li className="phoenix_kennels">info: {this.props.kennel.info}</li>
+                            <li className="phoenix_kennels">{this.props.kennel.info}</li>
                         <li className="phoenix_kennels">Size: {this.props.kennel.size}</li>
 
                         </ul>
