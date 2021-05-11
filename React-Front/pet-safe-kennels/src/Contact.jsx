@@ -39,7 +39,7 @@ export default class Contact extends Component{
             <p>Contact info</p>
             <p id="call">please call: 520-730-7020</p>  
             <h3 id="highlight">Important: Pet-Safe-Kennels Custom builds kennels by hand with wielders. These craftsmen
-            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is $2400. However that is also the price of a purebred pitbull. These kennels will outlast your car.</h3>
+            will build the perfect kennel for you, your home, and your pet. The minimum price per Kennel is <b id="call">$2000</b>. However that is also the price of a purebred pitbull. These kennels will outlast your car.</h3>
             <p> If our proposal is satisfactory, we only ask for half of the cost as a deposit and the remaining half upon completion. If you have not yet moved into a home you can reserve a dog kennel to be installed anywhere the greater Phoenix area 30 to 60 days in advance.</p>
             <p>Since 2006 we have fabricated hundreds of custom built predator proof pet enclosues. You Can NOT find better quality pet containment anywhere! We are a small company and once we take a deposit we work on that project until it's complete.</p>
         </div>)
