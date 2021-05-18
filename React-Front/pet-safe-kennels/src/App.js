@@ -11,9 +11,10 @@ import BigDogKennels from './components/BigDogKennels';
 import LowProfilePhoenixKennel from './components/LowProfilePhoenixKennel.jsx'
 import HorseShade from './components/HorseShade.jsx'
 import AdminDashboard from './components/AdminDashboard'; 
-
+import PetOwner from './components/PetOwner.jsx'
 import SecurityCheck from './components/AdminCheck'
-import Pictures from './components/Pictures.jsx'
+import Pictures from './components/Pictures.jsx' 
+import CreateAccount from './components/customers/CreateAccount.jsx'
 class App extends Component{ 
   componentDidMount(){
     fetch('http://localhost:3000/customers.json') 
@@ -42,6 +43,8 @@ class App extends Component{
        <Route exact path='/HorseShade' render={(routerProps)=> <HorseShade {...routerProps} /> } />
        <Route exact path='/Admin' render={ (routerProps)=><SecurityCheck {...routerProps} />} />
        <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
+       <Route exact path='/PetOwner' render={(routerProps)=> <PetOwner />} />
+       <Route exact path='/PetOwner/CustomerCreation' render={(routerProps)=> <CreateAccount {...routerProps} />} />
        </Router>
       </header>
     );

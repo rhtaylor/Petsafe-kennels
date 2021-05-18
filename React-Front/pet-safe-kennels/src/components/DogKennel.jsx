@@ -13,11 +13,11 @@ export default class DogKennel extends Component{
         this.setState({display: 'kennel_back'})
     } 
     static getDerivedStateFromProps(props, state) {
-     debugger
+     
         return { ...state, ...props.my_state}
     } 
     render(){ 
-        debugger
+        
         return(
             <div  id={this.props.id} key={this.props.custom_class[this.props.id].i.display} 
                 onClick={e => this.props.clickMe(e)}  

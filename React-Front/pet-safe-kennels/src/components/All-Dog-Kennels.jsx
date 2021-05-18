@@ -29,13 +29,13 @@ export default class AllDogKennelsPage extends Component{
     let new_array= DOGARRAY.map((k,i)=>{ 
         return { id: i, i: { display: 'myKennels', back: 'none'} }
     }) 
-    debugger
+    
     return new_array 
         
     }
     componentDidMount(){
         this.custom_class = this.state 
-        debugger
+        
     }
    flipKennel(e){
     let savedE = e 
@@ -43,13 +43,13 @@ export default class AllDogKennelsPage extends Component{
     let currentI = savedTarget.id
     e.persist()  
     
-    debugger
+    
        if (this.custom_class[currentI].i.display == 'myKennels'){
             this.custom_class[savedTarget.id].i = { display: 'none', back: 'kennel_back'}
        } else {
             this.custom_class[savedTarget.id].i = { display: 'myKennels', back: 'none' }
        } 
-       debugger
+       
     this.setState((preS)=>{ 
         return { [savedTarget.id]:{ 
         id:  savedTarget.id,   
