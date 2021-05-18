@@ -7,7 +7,7 @@ export default class Create_Form extends Component{
     
     render(){
     return(<div>
-        <form className="form">
+        <form className="form" handleSubmit={ event => this.props.handleSubmit(event)}>
             <label>First and Last Name</label>
             <input
             type="text"
