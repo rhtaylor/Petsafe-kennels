@@ -1936,3 +1936,11 @@ Completed 200 OK in 22ms (Views: 9.5ms | ActiveRecord: 5.2ms | Allocations: 9790
 Completed 200 OK in 33ms (Views: 7.3ms | ActiveRecord: 15.4ms | Allocations: 14818)
 
 
+Started GET "/customers.json" for ::1 at 2021-05-03 13:31:16 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (8.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 31ms (Views: 7.0ms | ActiveRecord: 12.9ms | Allocations: 8945)
+
+
