@@ -29,3 +29,11 @@
     }
 }
 
+.form{
+    display: flex;
+    flex-direction: column; 
+    width: clamp(400px, 400px, 400px); 
+    .button{
+        margin-left: 0px !important;
+    }
+}
