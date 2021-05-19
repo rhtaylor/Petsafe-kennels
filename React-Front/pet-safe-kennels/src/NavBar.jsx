@@ -22,11 +22,11 @@ export default class NavBar extends Component{
         display: "show"
     }
     componentDidMount(){
-       debugger
+    
     } 
     
     render(){  
-        debugger
+        
         {
             if (!this.props.location.pathname.includes('/PetOwner')){
     return (<div className="navbar" style={{display: this.state.display}}>

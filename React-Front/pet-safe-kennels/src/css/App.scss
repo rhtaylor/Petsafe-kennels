@@ -36,4 +36,29 @@
     .button{
         margin-left: 0px !important;
     }
+} 
+
+#Customer{
+    .True{  
+        animation: True 5s infinite;
+        background: url(#{'../pictures/favicon.ico'}); 
+        height: clamp(200px, 200px, 200px); 
+        width: clamp(200px, 200px, 200px);
+        background-repeat: no-repeat;
+        background-position:center; 
+        font-weight: bolder; 
+        font-style: italic;  
+        justify-content: center; 
+        align-content: center;
+        color: rgb(255, 0, 0); 
+        
+    }
+    .False{
+        display: none; 
+    }
+} 
+
+@keyframes True {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
