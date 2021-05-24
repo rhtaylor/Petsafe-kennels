@@ -1,6 +1,10 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
+  has_secure_password
+=======
   attr_accessor :customer, :kennel 
+>>>>>>> f76940ce45ab21f570975f5f5339edf63495ff4e
 
   #admin route will render special page for amin
   def admin 
@@ -36,11 +40,13 @@ class CustomersController < ApplicationController
 
   # POST /customers
   # POST /customers.json
-  def create
-    @customer = Customer.new(customer_params)
-
+  def create 
+    binding.pry
+    @customer = Customer.new(customer_params) 
+    binding.pry
+    if @customer && @customer.authenticate(params[:customer][:password])
     respond_to do |format|
-      if @customer.save
+      if @customer.save 
         format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
         format.json { render :show, status: :created, location: @customer }
       else
@@ -48,7 +54,8 @@ class CustomersController < ApplicationController
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end
     end
-  end
+  end 
+end
 
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json
@@ -82,6 +89,6 @@ class CustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def customer_params
-      params.require(:customer).permit(:name, :number, :email, :city)
+      params.require(:customer).permit(:name, :number, :email, :city, :address, :password, :password_confirmation)
     end
 end

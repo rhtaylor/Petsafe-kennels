@@ -9,16 +9,27 @@ const link = {
     textDecoration: 'none',
     color: 'white' 
 } 
-
+const customerLink = {
+    width: '100px',
+    padding: '12px',
+    margin: '0 6px 6px',
+    background: 'green',
+    textDecoration: 'none',
+    color: 'white'
+}
 export default class NavBar extends Component{
     state={
         display: "show"
     }
     componentDidMount(){
-       
-    }
-    render(){
-        return(<div className="navbar" style={{display: this.state.display}}>
+    
+    } 
+    
+    render(){  
+        
+        {
+            if (!this.props.location.pathname.includes('/PetOwner')){
+    return (<div className="navbar" style={{display: this.state.display}}>
             <NavLink
                 to="/Kennel"
                 /* set exact so it knows to only set activeStyle when route is deeply equal to link */
@@ -66,6 +77,23 @@ export default class NavBar extends Component{
                 activeStyle={{
                     backrround: 'darkblue'
                 }}>Contact</NavLink>
-        </div>)
-    }
+        </div>)}
+ else {
+        return (<div className="navbar" style={{ display: this.state.display }}>
+                <NavLink
+                    to="/PetOwner/CustomerCreation"
+                    /* set exact so it knows to only set activeStyle when route is deeply equal to link */
+                    exact
+                    /* add styling to Navlink */
+                    style={customerLink}
+                    /* add prop for activeStyle */
+                    activeStyle={{
+                        background: 'darkgreen'
+                    }}
+                >CreateAccount</NavLink> 
+                </div>)
+ }
+        
+} 
+} 
 }

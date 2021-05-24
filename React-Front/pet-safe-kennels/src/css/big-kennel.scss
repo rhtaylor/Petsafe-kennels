@@ -7,7 +7,13 @@
     max-height: clamp(350px, 350px, 350px); 
     min-height: clamp(350px, 350px, 350px); 
     max-width: clamp(450px, 450px,450px); 
-    min-width: clamp(450px, 450px,450px); 
+    min-width: clamp(450px, 450px,450px);  
+    @media only screen and (min-width: 360px) and (max-width: 1040px){
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+    }
     p{
         color: rgba(255, 0, 0, 0.808); 
         text-align: center; 
@@ -27,7 +33,13 @@
      max-height: clamp(350px, 350px, 350px); 
     min-height: clamp(350px, 350px, 350px); 
      max-width: clamp(450px, 450px,450px); 
-     min-width: clamp(450px, 450px,450px); 
+     min-width: clamp(450px, 450px,450px);  
+     @media only screen and (min-width: 360px) and (max-width: 1040px){
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+    }
   
      * {
          color: rgb(0, 0, 0); 
@@ -47,7 +59,7 @@
        
          font-size: medium;
          border-radius: 3px;  
-         background-color: rgb(255, 60, 0);
+         background-color: rgb(255, 0, 0);
          box-shadow: 2px 3px rgb(202, 138, 138);
      }
      #more:hover{

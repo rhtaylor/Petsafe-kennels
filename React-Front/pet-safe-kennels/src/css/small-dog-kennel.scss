@@ -1,9 +1,17 @@
 .Dog{
     display: block; 
-    align-content: center;
+    align-content: center; 
+    @media only screen and (min-width: 360px) and (max-width: 1040px){  
+        
+        p{
+            color: burlywood; 
+        }
+    }
 }
 
-p{
+p{ 
+
+
         margin-bottom: 0px;
     }
 #small-dog-kennel {   
@@ -12,7 +20,12 @@ p{
     background: url(#{'../pictures/lowProfileDogKennel.jpg'}); 
     background-repeat: no-repeat;
     background-position:center;
-    
+    @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+}
     max-width: clamp(450px, 450px,450px); 
     min-width: clamp(450px, 450px,450px);  
     max-height: clamp(350px, 350px, 350px); 
@@ -21,7 +34,7 @@ p{
     margin-left: 10vh;  
     margin-right: clamp(70vh, 70vh, 70vh);
     p{
-        color: rgb(216, 160, 178); 
+        color: rgb(74, 252, 237); 
         text-align: center; 
         font-weight: bold; 
        
@@ -29,9 +42,23 @@ p{
     #bottom{
         padding-top: 18vh; 
         
-    }
+    } 
+   @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    margin-left: 0px; 
+    margin-right: 0px;  
+    margin-left: 0px; 
+}
 } 
- #small-dog-kennel-back{ 
+ #small-dog-kennel-back{   
+     @media only screen and (min-width: 360px) and (max-width: 1040px){ 
+    margin-left: 0px;  
+    margin-right: 0px;  
+    margin-left: 0px; 
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(350px, 350px, 350px);
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+}
     cursor: pointer;
     background: url(#{'../pictures/card-back.jpg'}); 
     background-repeat: no-repeat;
@@ -39,7 +66,7 @@ p{
     max-height: clamp(350px, 350px, 350px); 
     min-height: clamp(350px, 350px, 350px);  
     max-width: clamp(450px, 450px,450px); 
-   
+    
     margin-right: 70vh;   
     margin-left: 10vh; 
     * {
@@ -59,7 +86,7 @@ p{
         font-size: medium;
         border-radius: 3px;  
         background-color: rgb(255, 60, 0);
-        box-shadow: 2px 3px rgb(202, 138, 138);
+        box-shadow: 2px 3px rgb(255, 137, 137);
     }
     #more:hover{
         cursor: pointer;

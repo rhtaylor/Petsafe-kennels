@@ -36,4 +36,36 @@ textarea{
 #submit{
     height: 10vh;
     border-radius: 10px;
+} 
+
+@media only screen and (min-width: 360px) and (max-width: 1040px){ 
+button.button{  
+    // display: none !important;
+    margin-top: 2%;
+    padding-top: 10px; 
+    margin-left: 10%;
+    justify-self: center; 
+    font-size: larger;
+    border-radius: 15px;  
+    background-color: rgb(255, 60, 0);
+    box-shadow: 4px 6px rgb(202, 138, 138);
+}    
+#dog-parent{  
+    display: block !important;
+    justify-content: flex-start;  
+    max-width: clamp(450px, 450px,450px); 
+    display: block; 
+    padding-left: 0px;
+    margin-left: 1px; 
+    max-width: auto; 
+    h3{   max-width: clamp(360px, 360px,360px); 
+         margin-left: 1%; 
+         color:wheat;
+         font-weight: bolder;
+         text-shadow: 2px  rgb(255, 221, 154);
+         font-family: serif;
+         overflow-wrap: break-word;
+    }
+}
+    
 }
