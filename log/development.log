@@ -2394,3 +2394,58 @@ Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 2.5ms | Allocations: 4128)
 Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 6.4ms | Allocations: 8365)
 
 
+Started GET "/customers.json" for ::1 at 2021-05-24 09:11:40 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 20ms (Views: 9.2ms | ActiveRecord: 4.7ms | Allocations: 8942)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 09:11:44 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 09:11:44 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mKennel Load (1.0ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.5ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 31ms (Views: 14.9ms | ActiveRecord: 4.6ms | Allocations: 6949)
+
+
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.7ms | Allocations: 1396)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 09:13:10 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mKennel Load (0.6ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.3ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 30ms (Views: 24.4ms | ActiveRecord: 1.9ms | Allocations: 3189)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 09:21:38 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 09:21:38 -0700
+Processing by CustomersController#index as */*
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 2.0ms | Allocations: 2075)
+
+
+  [1m[36mKennel Load (0.8ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.4ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 3.0ms | Allocations: 4625)
+
+
