@@ -1944,3 +1944,453 @@ Processing by CustomersController#index as */*
 Completed 200 OK in 31ms (Views: 7.0ms | ActiveRecord: 12.9ms | Allocations: 8945)
 
 
+Started GET "/customers.json" for ::1 at 2021-05-18 12:47:57 -0700
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (5.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 32ms (Views: 7.1ms | ActiveRecord: 11.3ms | Allocations: 8945)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 13:57:54 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (3.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 30ms (Views: 8.8ms | ActiveRecord: 10.4ms | Allocations: 8942)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:03:59 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1396)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:25:22 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 1396)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:25:42 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1347)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:27:39 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:42:22 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 2873)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 14:46:06 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1344)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 15:07:06 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.0ms | Allocations: 1384)
+
+
+Started GET "/" for ::1 at 2021-05-18 15:14:16 -0700
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/swordfish/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/swordfish/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 315)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 1663)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 15:57:23 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 2484)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 15:57:35 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 15:57:40 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:02:10 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:03:06 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.6ms | Allocations: 1328)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:05:12 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1327)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:05:53 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:11:20 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 1384)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:12:00 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:14:28 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:17:07 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:20:54 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:21:37 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:23:16 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:25:41 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:27:47 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:28:05 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 16:40:35 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 19ms (Views: 6.8ms | ActiveRecord: 5.2ms | Allocations: 8945)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:09:20 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.0ms | Allocations: 2862)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:13:19 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1344)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:16:35 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.9ms | Allocations: 1344)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:16:52 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:17:28 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:21:00 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.5ms | Allocations: 1344)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:21:09 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1326)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-18 19:22:22 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 1326)
+
+
+Started POST "/" for ::1 at 2021-05-18 19:22:27 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/" for ::1 at 2021-05-18 19:30:05 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/customers.json" for ::1 at 2021-05-18 19:42:54 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (4.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 4.6ms | Allocations: 1383)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-24 07:12:51 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 23ms (Views: 6.8ms | ActiveRecord: 7.5ms | Allocations: 8945)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-24 07:18:59 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 1396)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-24 07:19:31 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1344)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 07:20:07 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mKennel Load (3.5ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.4ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 39ms (Views: 12.3ms | ActiveRecord: 8.1ms | Allocations: 8314)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 07:21:30 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 07:21:30 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mKennel Load (0.7ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.4ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.6ms | Allocations: 3133)
+
+
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1384)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 08:40:23 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 08:40:23 -0700
+Processing by CustomersController#admin as JSON
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms | Allocations: 9058)
+
+
+  [1m[36mKennel Load (0.6ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.4ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 2.6ms | Allocations: 12459)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 08:41:34 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 08:41:34 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+Processing by CustomersController#index as */*
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mKennel Load (0.6ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.8ms | Allocations: 2472)
+
+
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.5ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 1.5ms | Allocations: 5139)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 08:52:23 -0700
+Processing by CustomersController#admin as JSON
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mKennel Load (0.6ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (1.2ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 3.2ms | Allocations: 3221)
+
+
+Started GET "/admin.json" for ::1 at 2021-05-24 09:04:46 -0700
+Started GET "/customers.json" for ::1 at 2021-05-24 09:04:46 -0700
+Processing by CustomersController#admin as JSON
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (3.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:8:in `map'
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:18:in `block (2 levels) in index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 2.5ms | Allocations: 4128)
+
+
+  [1m[36mKennel Load (1.1ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 1]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+  [1m[36mKennel Load (0.4ms)[0m  [1m[34mSELECT "kennels".* FROM "kennels" WHERE "kennels"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:10:in `block (2 levels) in admin'
+Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 6.4ms | Allocations: 8365)
+
+
