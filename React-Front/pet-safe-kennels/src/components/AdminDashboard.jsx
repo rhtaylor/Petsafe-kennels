@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-
+import Customer_Card from './customers/Customer_Card'
 export default class AdminDashboard extends Component{
     constructor(props){
-    super(props) 
+    super(props)  
+    // this.makeCustomers = this.makeCustomers.bind(this)
     this.state = {
         customers: []
     } 
@@ -11,18 +12,13 @@ export default class AdminDashboard extends Component{
     render(){ 
         debugger
         return(<div>
-                <ul>
-               {this.state.customers.map(person =>{ return (<div key={this.state.customers.customer}><ul><li>{person.customer.name}</li><li>{person.customer.number}</li></ul>
-                     <ul>{ person.kennel.map((k)=> <li>{k.kennel_type}</li>) }</ul>
-                   <br/>
-                   </div>)})
-                    
-            }
-            </ul> 
-            </div>
-            )
+                <Customer_Card customers={this.state.customers}/> 
+               </div>
+              )
     
-        }
+        } 
+
+
     componentDidMount() {
         fetch('http://localhost:3000/admin.json')
             .then(response => response.json())
