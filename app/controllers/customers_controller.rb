@@ -1,8 +1,9 @@
-class CustomersController < ApplicationController
+class CustomersController < ApplicationController 
+  skip_before_action :verify_authenticity_token, :only => [:create]
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
   attr_accessor :customer, :kennel 
-
-  #admin route will render special page for amin
+         
+  
   def admin 
     @customers = Customer.all
     @associatedInfo = @customers.map{ |cus| {customer: cus, kennel: cus.kennels} } 
@@ -26,7 +27,8 @@ class CustomersController < ApplicationController
   end
 
   # GET /customers/new
-  def new
+  def new 
+    binding.pry
     @customer = Customer.new
   end
 
@@ -37,7 +39,9 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create 
-    binding.pry
+     
+    params[:customer][:password] = params[:password] 
+    params[:customer][:password_confirmation] = params[:password_confirmation] 
     @customer = Customer.new(customer_params) 
     binding.pry
     if @customer && @customer.authenticate(params[:customer][:password])
