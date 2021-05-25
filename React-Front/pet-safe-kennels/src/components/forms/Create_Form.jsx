@@ -33,8 +33,25 @@ export default class Create_Form extends Component{
             type="text"
             name="city"
             onChange={event => this.props.handleChange(event)}
-            value={this.props.formData.city} /> 
-
+            value={this.props.formData.city} />
+        <label>Address</label> 
+        <input
+                type="text"
+                name="address"
+                onChange={event => this.props.handleChange(event)}
+                value={this.props.formData.address} />
+        <label>Password</label>
+        <input
+                type="password"
+                name="password"
+                onChange={event => this.props.handleChange(event)}
+                value={this.props.formData.password} /> 
+        <label>Password Confirmation</label>
+        <input
+                type="password"
+                name="password_confirmation"
+                onChange={event => this.props.handleChange(event)}
+                value={this.props.formData.password_confirmation} />
         <input className="button" type="submit" value="create" />
         </form>  
 

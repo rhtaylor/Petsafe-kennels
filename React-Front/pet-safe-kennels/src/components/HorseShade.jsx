@@ -15,7 +15,7 @@ export default class HorseShade extends Component{
     render(){
         return (<div className="horse-shade" >
             <p className="horse-shade">{INFO}</p> 
-            <iframe src="http://www.ok-corrals.com/"></iframe>
+            
             <div id="kennel_slide">{this.makePetShade()}</div>
             </div>)
     }

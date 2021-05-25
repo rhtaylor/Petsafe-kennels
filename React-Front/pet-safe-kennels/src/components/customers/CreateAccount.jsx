@@ -7,7 +7,9 @@ export default class CreateAccount extends Component{
             name: '',
             email: '',
             number: '',
-            city: '', 
+            city: '',  
+            address: '',
+            password: '', 
             pending: false
 
         } 
@@ -17,26 +19,47 @@ export default class CreateAccount extends Component{
     handlesubmit(e){  
         e.preventDefault();
         debugger
-
-        let saved_e = e 
+        let saved_e = e
+        let name = saved_e.currentTarget.name.value
+        let number = saved_e.currentTarget.number.value
+        let email = saved_e.currentTarget.email.value
+        let city = saved_e.currentTarget.city.value 
+        let address = saved_e.currentTarget.address.value
+        let password = saved_e.currentTarget.password.value
+        let password_confirmation = saved_e.currentTarget.password_confirmation.value 
+        debugger
         this.setState(pS=>{ 
-            return {...pS,  
-                pending: true 
-            }} 
+            return { 
+                pending: true,
+                name: name, 
+                number: number,
+                email: email,
+                city: city,
+                address: address,  
+                password: password,
+                password_confirmation: password_confirmation,  
+                 }
+            } 
             )
-        
-        fetch('http://localhost:3000', {
+        debugger
+        fetch('http://localhost:3000/customers/new', {
             method: "POST",
             headers: {
-                "Content-Type": "application/json", 
-                'Access-Control-Allow-Origin': '*', 
-                'node': 'no-cors'
+                mode: 'no-cors',
+                'Content-Type': "application/json", 
+                'Access-Control-Allow-Origin': 'http://localhost:3001',
+                'credentials': 'same-origin'
             },
             body: JSON.stringify(this.state)
         }).then(x=>{ 
             debugger 
          })
-
+          
+         this.setState(preS =>{
+             return {...preS, 
+                pending: false
+            }
+         })
     } 
 
 
