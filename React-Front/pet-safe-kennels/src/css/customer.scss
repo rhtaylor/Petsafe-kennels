@@ -4,4 +4,15 @@
     display: block;
     background-repeat: no-repeat;
     background-position:center
+} 
+
+.null{
+    display: none; 
+} 
+.error{
+    display: flex; 
+    color: red; 
+    h1{
+        color: red
+    }
 }

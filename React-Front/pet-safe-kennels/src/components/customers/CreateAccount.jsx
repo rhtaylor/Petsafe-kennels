@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import Create_Form from '../forms/Create_Form'
+import Create_Form from '../forms/Create_Form' 
+import '../../css/customer.scss'
+var GLOBAL_FLAG = 'null' 
+var ERROR_MESSAGES= undefined 
+var CREATE_CUSTOMER_URL = 'http://localhost:3000/customers/new'
 export default class CreateAccount extends Component{
     constructor(props){
         super(props)
@@ -10,12 +14,16 @@ export default class CreateAccount extends Component{
             city: '',  
             address: '',
             password: '', 
-            pending: false
+            pending: false, 
+            GLOBAL_FLAG: 'null', 
+            created: undefined,
+            errors: undefined
 
         } 
         this.handleChange = this.handleChange.bind(this) 
         this.handlesubmit = this.handlesubmit.bind(this)
-    } 
+    }  
+    
     handlesubmit(e){  
         e.preventDefault();
         debugger
@@ -42,7 +50,7 @@ export default class CreateAccount extends Component{
             } 
             )
         debugger
-        fetch('http://localhost:3000/customers/new', {
+        fetch( CREATE_CUSTOMER_URL, {
             method: "POST",
             headers: {
                 mode: 'no-cors',
@@ -51,15 +59,37 @@ export default class CreateAccount extends Component{
                 'credentials': 'same-origin'
             },
             body: JSON.stringify(this.state)
-        }).then(x=>{ 
-            debugger 
-         })
-          
-         this.setState(preS =>{
-             return {...preS, 
-                pending: false
+        }).then((response) => { (response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
+            return response
+        }).then( (x) =>{ return x.json()
+        //     return x.json() 
+        //     (x.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
+        // return x.json()
+        }).then(res=>{ debugger
+
+        }) 
+        .then( (x)=>{ 
+            debugger })
+        .catch(function (error) {                      
+                  
+                GLOBAL_FLAG = 'error'
+        }); 
+
+          if (GLOBAL_FLAG == 'error'){ 
+            
+          } 
+          else { 
+           
+          } 
+        setTimeout(()=>{  
+            return this.setState(preS => {
+            return {
+                ...preS,
+                pending: false, 
+                GLOBAL_FLAG: GLOBAL_FLAG
             }
-         })
+        })}, 6000)
+        
     } 
 
 
@@ -78,7 +108,8 @@ export default class CreateAccount extends Component{
         
         return (<div id="Customer"> 
             <div key={this.state.pending} className={ this.state.pending == false ? "False" : "True"}>Loading</div>
-            <h1>Create Account</h1> 
+            <h1>Create Account</h1>
+            <h1 key={this.state.GLOBAL_FLAG} className={this.state.GLOBAL_FLAG} id="error">ERROR</h1> 
             <Create_Form formData={this.state}  
             handleChange={this.handleChange} 
             handleSubmit={this.handlesubmit}
