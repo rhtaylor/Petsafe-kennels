@@ -3,7 +3,8 @@ import Create_Form from '../forms/Create_Form'
 import '../../css/customer.scss'
 var GLOBAL_FLAG = 'null' 
 var ERROR_MESSAGES= undefined 
-var CREATE_CUSTOMER_URL = 'http://localhost:3000/customers/new'
+var CREATE_CUSTOMER_URL = 'http://localhost:3000/customers/new' 
+
 export default class CreateAccount extends Component{
     constructor(props){
         super(props)
@@ -17,11 +18,12 @@ export default class CreateAccount extends Component{
             pending: false, 
             GLOBAL_FLAG: 'null', 
             created: undefined,
-            errors: undefined
+            errors: []
 
         } 
         this.handleChange = this.handleChange.bind(this) 
-        this.handlesubmit = this.handlesubmit.bind(this)
+        this.handlesubmit = this.handlesubmit.bind(this) 
+        
     }  
     
     handlesubmit(e){  
@@ -50,23 +52,27 @@ export default class CreateAccount extends Component{
             } 
             )
         debugger
-        fetch( CREATE_CUSTOMER_URL, {
+        fetch(CREATE_CUSTOMER_URL, {
             method: "POST",
             headers: {
                 mode: 'no-cors',
-                'Content-Type': "application/json", 
+                'Content-Type': "application/json",
                 'Access-Control-Allow-Origin': 'http://localhost:3001',
                 'credentials': 'same-origin'
             },
             body: JSON.stringify(this.state)
-        }).then((response) => { (response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
-            return response
-        }).then( (x) =>{ return x.json()
+        } )
+        .then((response) => { (response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
+            debugger    
+        return response
+        }).bind(this) 
+        .then( (x) =>{ return x.json()
         //     return x.json() 
         //     (x.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
         // return x.json()
-        }).then(res=>{ debugger
-
+        }).then(res=>{ this.setState((preS) =>{
+            return {...preS, errors: res} 
+        }) 
         }) 
         .then( (x)=>{ 
             debugger })
@@ -115,5 +121,8 @@ export default class CreateAccount extends Component{
             handleSubmit={this.handlesubmit}
             />
             </div>)
-    }
+    } 
+
+   
+
 }
