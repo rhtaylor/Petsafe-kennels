@@ -39,23 +39,31 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create 
+        params[:customer][:password] = params[:password] 
+        params[:customer][:password_confirmation] = params[:password_confirmation] 
      
-    params[:customer][:password] = params[:password] 
-    params[:customer][:password_confirmation] = params[:password_confirmation] 
-    @customer = Customer.new(customer_params) 
-    binding.pry
-    if @customer && @customer.authenticate(params[:customer][:password])
-    respond_to do |format|
+       @customer = Customer.new(customer_params) 
+       
       if @customer.save 
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
-        format.json { render :show, status: :created, location: @customer }
-      else
-        format.html { render :new }
-        format.json { render json: @customer.errors, status: :unprocessable_entity }
-      end
+          respond_to do |format|
+          if @customer.save && @customer.authenticate(params[:customer][:password])
+            format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+            format.json { render :show, status: :created, location: @customer }
+           else
+            format.html { render :new }
+            format.json { render json: @customer.errors, status: :unprocessable_entity }
+           end 
+          end
+          
+         elsif @customer.errors  
+          
+          respond_to do |format|   
+           format.json { render json: @customer.errors.full_messages, message: @customer.errors.full_messages.to_json, status: :unprocessable_entity }
+      end  
     end
+    
   end 
-end
+
 
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json

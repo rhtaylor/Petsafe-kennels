@@ -4226,3 +4226,1065 @@ to the "plugins" section of your Babel config.
 Completed 200 OK in 3591ms (Views: 3577.3ms | ActiveRecord: 0.6ms | Allocations: 11711)
 
 
+Started GET "/customers.json" for ::1 at 2021-05-25 07:55:04 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 29ms (Views: 16.0ms | ActiveRecord: 5.7ms | Allocations: 10840)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 07:56:09 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 3.6ms | Allocations: 8976)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 08:06:22 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+Started GET "/customers.json" for ::1 at 2021-05-25 08:06:22 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 2.0ms | Allocations: 2068)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 08:08:03 -0700
+Completed 500 Internal Server Error in 577343ms (ActiveRecord: 0.0ms | Allocations: 40911)
+
+
+  
+SystemExit (exit):
+  
+(pry):1:in `exit'
+(pry):1:in `create'
+app/controllers/customers_controller.rb:46:in `create'
+Started POST "/customers/new" for ::1 at 2021-05-25 08:15:59 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 5.8ms | Allocations: 2681)
+  Rendered customers/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1939ms (Views: 28.0ms | ActiveRecord: 9.4ms | Allocations: 37000)
+
+
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 1.5ms | Allocations: 1274)
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1363)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1740ms (Views: 12.3ms | ActiveRecord: 5.2ms | Allocations: 27463)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 08:18:10 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1918)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 08:18:32 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 2.1ms | Allocations: 1655)
+  Rendered customers/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5710ms (Views: 13.5ms | ActiveRecord: 1.0ms | Allocations: 23022)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 08:20:20 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>true, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):3:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ (pry):3:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):3:in `create'
+Started GET "/customers.json" for ::1 at 2021-05-25 08:25:21 -0700
+Started POST "/customers/new" for ::1 at 2021-05-25 08:25:21 -0700
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:49:in `block in create'
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 1.4ms | Allocations: 1259)
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1347)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 302687ms (Views: 10.8ms | ActiveRecord: 2.8ms | Allocations: 41506)
+
+
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started GET "/customers.json" for ::1 at 2021-05-25 08:39:29 -0700
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started POST "/customers/new" for ::1 at 2021-05-25 08:39:47 -0700
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started GET "/customers.json" for ::1 at 2021-05-25 08:41:04 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~
+/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:99: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:99: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:99: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:99: syntax error, unexpected end, expecting end-of-input
+Started POST "/customers/new" for ::1 at 2021-05-25 08:43:11 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started GET "/customers.json" for 127.0.0.1 at 2021-05-25 08:43:51 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+Started POST "/customers/new" for ::1 at 2021-05-25 08:45:40 -0700
+Started GET "/customers.json" for ::1 at 2021-05-25 08:45:40 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started POST "/customers/new" for ::1 at 2021-05-25 08:45:55 -0700
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: else without rescue is useless
+    else  
+    ^~~~):
+  
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+app/controllers/customers_controller.rb:56: else without rescue is useless
+Started GET "/customers.json" for ::1 at 2021-05-25 08:47:38 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+    else  
+    ^~~~
+/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+Started POST "/customers/new" for ::1 at 2021-05-25 08:47:51 -0700
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+    else  
+    ^~~~
+/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:56: syntax error, unexpected else, expecting end
+app/controllers/customers_controller.rb:100: syntax error, unexpected end-of-input, expecting end
+Started GET "/customers.json" for ::1 at 2021-05-25 09:42:30 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+app/controllers/customers_controller.rb:101: syntax error, unexpected end, expecting end-of-input
+Started GET "/customers.json" for ::1 at 2021-05-25 09:44:50 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 37ms (Views: 19.1ms | ActiveRecord: 8.3ms | Allocations: 9861)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 09:45:01 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):4:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):4:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):4:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 83704ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 79314)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 09:47:28 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 5.4ms | Allocations: 8986)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 09:47:34 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9423ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 21539)
+
+
+Started GET "/customers.json" for 127.0.0.1 at 2021-05-25 09:49:10 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+Started GET "/customers.json" for ::1 at 2021-05-25 09:49:36 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:58: else without rescue is useless
+         else if @customer.errors  
+         ^~~~
+/mnt/c/Users/swordfish/dev/flatiron/Portfolio/petsafe-kennels/PetSafeKennels/PetSafe-Kennels/app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/customers_controller.rb:58: else without rescue is useless
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:58: else without rescue is useless
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+app/controllers/customers_controller.rb:58: else without rescue is useless
+app/controllers/customers_controller.rb:101: syntax error, unexpected end-of-input, expecting end
+Started GET "/customers.json" for ::1 at 2021-05-25 09:51:00 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 39ms (Views: 21.2ms | ActiveRecord: 7.9ms | Allocations: 9861)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 09:51:08 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 8677ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 40126)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 09:53:06 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11949ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 20899)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 10:37:30 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.3ms | Allocations: 1935)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 10:37:38 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9985ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 20966)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 10:38:25 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 5988ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 20862)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 10:51:16 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+Started POST "/customers/new" for ::1 at 2021-05-25 10:57:23 -0700
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 382563ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 26809)
+
+
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 4760ms (Views: 0.1ms | ActiveRecord: 8.1ms | Allocations: 26486)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 10:58:01 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>true, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 19238ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 20959)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 10:59:40 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1918)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 10:59:45 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9130ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 20864)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 11:00:26 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1863)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 11:00:32 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9018ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 20864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 11:39:58 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>true, "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 15270ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 20905)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 11:52:16 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 4864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 11:52:24 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11183ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 22819)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 11:54:27 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 33ms (Views: 17.1ms | ActiveRecord: 12.7ms | Allocations: 9016)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 11:54:34 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9392ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 21071)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 12:42:21 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 14867ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 19825)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 12:48:43 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 26ms (Views: 12.9ms | ActiveRecord: 5.0ms | Allocations: 9861)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 12:48:49 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 25ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 7172)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 12:50:17 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 26ms (Views: 13.1ms | ActiveRecord: 0.9ms | Allocations: 4957)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 12:51:25 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 4956)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 12:52:53 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 7041)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 13:13:20 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 1922)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 13:19:59 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"Randall Taylor", "email"=>"randyisbusy@gmail.com", "number"=>"5555555555", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"Randall Taylor", "number"=>"5555555555", "email"=>"randyisbusy@gmail.com", "city"=>"Phoenix", "address"=>"1229 E Sahuaro Dr"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" = $1 LIMIT $2[0m  [["number", 5555555555], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 205ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 3887)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 13:27:20 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 51ms (Views: 25.7ms | ActiveRecord: 8.4ms | Allocations: 9861)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 13:27:26 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 23ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 7653)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 13:31:25 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 5426)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 13:33:17 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 5427)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 13:34:03 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 5425)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 16:04:50 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 1.2ms | Allocations: 8738)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 16:04:59 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:05:11 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5624)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:07:03 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 9ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5404)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:07:54 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 5403)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:09:23 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"error", "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 60652ms (Views: 0.1ms | ActiveRecord: 7.8ms | Allocations: 53345)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:11:04 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 17ms (Views: 0.1ms | ActiveRecord: 4.2ms | Allocations: 11538)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:12:44 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 29ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 5935)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:13:02 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"error", "password_confirmation"=>"[FILTERED]", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 13ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 5933)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:14:30 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5934)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:29:07 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5953)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:29:40 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 5934)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:30:54 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 21ms (Views: 0.5ms | ActiveRecord: 3.1ms | Allocations: 5934)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 16:30:55 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1936)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:31:01 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5934)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 16:31:41 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 29ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 5934)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-25 19:11:16 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (8.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 8.0ms | Allocations: 4866)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 19:12:22 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 5951)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 19:14:59 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 19ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 5935)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 19:32:15 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 5955)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-25 19:33:07 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5935)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 03:28:19 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 2.4ms | Allocations: 4865)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 03:38:14 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 11531)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 03:42:23 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 13ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 5936)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 03:42:42 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1919)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 03:42:49 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 5935)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 03:52:04 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.0ms | Allocations: 1922)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 03:52:15 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 03:52:28 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 5951)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 03:52:46 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 03:52:56 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 5935)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 04:47:46 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.1ms | Allocations: 4866)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 04:47:54 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "errors"=>[], "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 5953)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 04:48:40 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "errors"=>[], "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 21ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 5937)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 04:49:56 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 04:50:03 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "errors"=>[], "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 5937)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 04:50:36 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1864)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 04:50:42 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "errors"=>[], "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 5937)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 04:58:47 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 1922)
+
+
+Started POST "/customers/new" for ::1 at 2021-05-26 04:58:55 -0700
+Processing by CustomersController#create as */*
+  Parameters: {"name"=>"", "email"=>"", "number"=>"", "city"=>"", "address"=>"", "password"=>"[FILTERED]", "pending"=>false, "GLOBAL_FLAG"=>"null", "errors"=>[], "customer"=>{"name"=>"", "number"=>"", "email"=>"", "city"=>"", "address"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."number" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:47:in `create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 5954)
+
+
+Started GET "/customers.json" for ::1 at 2021-05-26 05:05:54 -0700
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:19:in `block (2 levels) in index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.1ms | Allocations: 1922)
+
+
