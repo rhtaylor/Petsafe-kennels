@@ -65,8 +65,10 @@ export default class CreateAccount extends Component{
         .then((response) => { (response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
             debugger    
         return response
-        }).bind(this) 
-        .then( (x) =>{ return x.json()
+        }) 
+        .then( (x) =>{  
+            debugger
+            return x.json()
         //     return x.json() 
         //     (x.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
         // return x.json()
@@ -115,7 +117,8 @@ export default class CreateAccount extends Component{
         return (<div id="Customer"> 
             <div key={this.state.pending} className={ this.state.pending == false ? "False" : "True"}>Loading</div>
             <h1>Create Account</h1>
-            <h1 key={this.state.GLOBAL_FLAG} className={this.state.GLOBAL_FLAG} id="error">ERROR</h1> 
+            <h1 key={this.state.GLOBAL_FLAG} className={this.state.GLOBAL_FLAG} id="error">Something went wrong</h1> 
+            <p key={this.state.GLOBAL_FLAG + "."} className={this.state.GLOBAL_FLAG} id="error">please try again:)</p>
             <Create_Form formData={this.state}  
             handleChange={this.handleChange} 
             handleSubmit={this.handlesubmit}

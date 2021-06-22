@@ -90,7 +90,18 @@ export default class NavBar extends Component{
                     activeStyle={{
                         background: 'darkgreen'
                     }}
-                >CreateAccount</NavLink> 
+                >CreateAccount</NavLink>  
+            <NavLink
+                to="/PetOwner/SignIn"
+                /* set exact so it knows to only set activeStyle when route is deeply equal to link */
+                exact
+                /* add styling to Navlink */
+                style={customerLink}
+                /* add prop for activeStyle */
+                activeStyle={{
+                    background: 'darkgreen'
+                }}
+            >SignIn</NavLink>
                 </div>)
  }
         

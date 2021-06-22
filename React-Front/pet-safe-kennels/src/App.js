@@ -15,6 +15,8 @@ import PetOwner from './components/PetOwner.jsx'
 import SecurityCheck from './components/AdminCheck'
 import Pictures from './components/Pictures.jsx' 
 import CreateAccount from './components/customers/CreateAccount.jsx'
+import SignIn from './components/customers/SignIn.jsx'
+
 class App extends Component{ 
   componentDidMount(){
     fetch('http://localhost:3000/customers.json') 
@@ -45,6 +47,7 @@ class App extends Component{
        <Route exact path='/AdminDashboard' render={(routerProps)=> <AdminDashboard {...routerProps}/>} />
        <Route exact path='/PetOwner' render={(routerProps)=> <PetOwner />} />
        <Route exact path='/PetOwner/CustomerCreation' render={(routerProps)=> <CreateAccount {...routerProps} />} />
+       <Route exact path='/PetOwner/SignIn' render={(routerProps) => <SignIn {...routerProps} />} />
        </Router>
       </header>
     );
