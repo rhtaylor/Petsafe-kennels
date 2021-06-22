@@ -1,0 +1,72 @@
+.Dog{
+    display: block; 
+    align-content: center;
+}
+
+p{
+        margin-bottom: 0px;
+    }
+#small-dog-kennel {   
+    
+    cursor: pointer;
+    background: url(#{'../pictures/lowProfileDogKennel.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    
+    max-width: clamp(450px, 450px,450px); 
+    min-width: clamp(450px, 450px,450px);  
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px); 
+    margin-right: 70vh;  
+    margin-left: 10vh;  
+    margin-right: clamp(70vh, 70vh, 70vh);
+    p{
+        color: rgb(216, 160, 178); 
+        text-align: center; 
+        font-weight: bold; 
+       
+    }  
+    #bottom{
+        padding-top: 18vh; 
+        
+    }
+} 
+ #small-dog-kennel-back{ 
+    cursor: pointer;
+    background: url(#{'../pictures/card-back.jpg'}); 
+    background-repeat: no-repeat;
+    background-position:center;
+    max-height: clamp(350px, 350px, 350px); 
+    min-height: clamp(350px, 350px, 350px);  
+    max-width: clamp(450px, 450px,450px); 
+   
+    margin-right: 70vh;   
+    margin-left: 10vh; 
+    * {
+        color: black; 
+        text-align: center;
+        font-weight: bold; 
+        word-wrap: break-word; 
+    } 
+    #link{
+        color: rgb(116, 52, 22)
+    }  
+    #link:hover{
+        color: rgb(204, 105, 75);
+    } 
+    #more{
+       
+        font-size: medium;
+        border-radius: 3px;  
+        background-color: rgb(255, 60, 0);
+        box-shadow: 2px 3px rgb(202, 138, 138);
+    }
+    #more:hover{
+        cursor: pointer;
+    }
+ }
+ #back{ 
+        cursor: pointer;
+        color: rgb(165, 82, 82); 
+        text-decoration: underline;
+    }
