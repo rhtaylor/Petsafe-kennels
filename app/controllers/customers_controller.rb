@@ -1,10 +1,7 @@
 class CustomersController < ApplicationController
+  
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-<<<<<<< HEAD
-  has_secure_password
-=======
-  attr_accessor :customer, :kennel 
->>>>>>> f76940ce45ab21f570975f5f5339edf63495ff4e
+  
 
   #admin route will render special page for amin
   def admin 

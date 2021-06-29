@@ -89,8 +89,7 @@ export default class CreateAccount extends Component{
             // update state to save data for the POST request upon submit
             return {...pS,  
                 [for_update]: value
-            
-        }
+                   }
         })
     }
     render(){ 
