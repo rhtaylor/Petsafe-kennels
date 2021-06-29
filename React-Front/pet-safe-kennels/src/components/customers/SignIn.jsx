@@ -18,14 +18,18 @@ export default class SignIn extends Component{
         let for_update = saved_e.currentTarget.name
         let value = saved_e.currentTarget.value
         this.setState(pS => {
+            // below is beautiful code just had to brag!
             return {
                 ...pS,
                 [for_update]: value
             }
         })
     }
-    handlesubmit(){
-
+    handlesubmit(e){
+        // sends POST signin request to Ruby Backend
+        e.preventDefault() && e.presist()
+        let saved_e = e 
+        
     }
     render(){
         return(<div>

@@ -28,29 +28,8 @@ export default class CreateAccount extends Component{
     
     handlesubmit(e){  
         e.preventDefault();
-        debugger
         let saved_e = e
-        let name = saved_e.currentTarget.name.value
-        let number = saved_e.currentTarget.number.value
-        let email = saved_e.currentTarget.email.value
-        let city = saved_e.currentTarget.city.value 
-        let address = saved_e.currentTarget.address.value
-        let password = saved_e.currentTarget.password.value
-        let password_confirmation = saved_e.currentTarget.password_confirmation.value 
-        debugger
-        this.setState(pS=>{ 
-            return { 
-                pending: true,
-                name: name, 
-                number: number,
-                email: email,
-                city: city,
-                address: address,  
-                password: password,
-                password_confirmation: password_confirmation,  
-                 }
-            } 
-            )
+        // POST requst for backend
         debugger
         fetch(CREATE_CUSTOMER_URL, {
             method: "POST",
@@ -62,7 +41,7 @@ export default class CreateAccount extends Component{
             },
             body: JSON.stringify(this.state)
         } )
-        .then((response) => { (response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
+        .then((response) => { /*regExp to id status of success or fail of POST*/(response.status.toString().match(/^2/) == null) ? GLOBAL_FLAG = 'error' : GLOBAL_FLAG = 'created'
             debugger    
         return response
         }) 
@@ -104,12 +83,27 @@ export default class CreateAccount extends Component{
     handleChange(e){
         e.preventDefault() && e.presist()
         let saved_e = e 
-        
         let for_update = saved_e.currentTarget.name  
-        let value = saved_e.currentTarget.value
+        let value = saved_e.currentTarget.value 
+        let saved_e = e
+        let name = saved_e.currentTarget.name.value
+        let number = saved_e.currentTarget.number.value
+        let email = saved_e.currentTarget.email.value
+        let city = saved_e.currentTarget.city.value
+        let address = saved_e.currentTarget.address.value
+        let password = saved_e.currentTarget.password.value
+        let password_confirmation = saved_e.currentTarget.password_confirmation.value
         this.setState(pS=>{
+            // update state to save data for the POST request upon submit
             return {...pS, 
-            [for_update] : value}
+            'name': name,
+            'number': number,
+            'email': email,
+            'city': city,
+            'address': address,
+            'password': password,
+            'password_confirmation': password_confirmation
+        }
         })
     }
     render(){ 
